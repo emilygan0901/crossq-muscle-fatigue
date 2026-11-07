@@ -5,7 +5,7 @@
 #
 # Creates results/raw/<run_id>/ containing:
 #   config.cfg        copy of the config used
-#   meta.txt          run id, exact command, code commit, Python, GPU, start/end time, exit code
+#   meta.txt          run id, env vars, exact command, code commit, Python, GPU, start/end time, exit code
 #   code.diff         any changes to the code directory (empty = unmodified)
 #   packages.txt      exact package versions
 #   train.log         everything the training script printed
@@ -33,6 +33,7 @@ CMD=( "$PYTHON" "$CODE_DIR/train.py" -env "$ENV_ID" -seed "$SEED"
   echo "run_id: $RUN_ID"
   echo "config: ${CONFIG#"$KIT_DIR"/}"
   echo "seed: $SEED"
+  echo "env_vars: RUN_SEED=$SEED ${ENV_VARS:-}"
   echo "command: ${CMD[*]}"
   echo "code_dir: $CODE_DIR"
   echo "code_commit: $(git -C "$CODE_DIR" rev-parse HEAD 2>/dev/null || echo unknown)"
@@ -50,7 +51,11 @@ git -C "$CODE_DIR" diff > "$OUT/code.diff" 2>/dev/null
 
 echo "[start] $RUN_ID (gpu $GPU)"
 start=$(date +%s)
-( cd "$OUT" && CUDA_VISIBLE_DEVICES=$GPU MPLBACKEND=Agg JAX_PLATFORMS=${JAX_PLATFORMS:-cuda} \
+# ENV_VARS (optional, from the config) are extra settings read by our own code, e.g. the
+# fatigue schedule. RUN_SEED lets src/fatigue_drift.py seed MyoSuite. src/ is put on PYTHONPATH.
+# shellcheck disable=SC2086
+( cd "$OUT" && env CUDA_VISIBLE_DEVICES="$GPU" MPLBACKEND=Agg JAX_PLATFORMS="${JAX_PLATFORMS:-cuda}" \
+    RUN_SEED="$SEED" PYTHONPATH="$KIT_DIR/src${PYTHONPATH:+:$PYTHONPATH}" ${ENV_VARS:-} \
     "${CMD[@]}" > train.log 2>&1 )
 rc=$?
 minutes=$(( ($(date +%s) - start + 30) / 60 ))

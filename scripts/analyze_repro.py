@@ -30,7 +30,7 @@ SMOOTH = 5                                  # evaluations in the trailing mean (
 CHECKPOINTS = [100_000, 250_000, 500_000]
 ALGOS = [("crossq", "CrossQ", "#2a78d6"), ("sac", "SAC", "#eb6834")]
 # Approximate values read by eye from the paper's Fig. 5 (Walker2d panel) at 0.5M steps.
-PAPER_AT_500K = {"crossq": "~6000-6500", "sac": "~4000-4500"}
+PAPER_AT_500K = {"crossq": "~6300", "sac": "~4000"}
 
 
 def iqm(x, axis=0):

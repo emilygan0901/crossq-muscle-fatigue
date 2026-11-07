@@ -11,7 +11,9 @@ import gymnasium as gym
 import numpy as np
 
 env_id, n_episodes, seed, out = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
-if env_id.startswith("myo"):
+if "Drift" in env_id:
+    import fatigue_drift  # noqa: F401  (registers the fatigue-drift tasks; needs src/ on PYTHONPATH)
+elif env_id.startswith("myo"):
     import myosuite  # noqa: F401  (registers MyoSuite environments)
 
 env = gym.make(env_id)

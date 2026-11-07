@@ -1,37 +1,73 @@
 # How to run the experiments
 
-Everything is driven by **config files** (`configs/`) and two scripts (`scripts/`).
+Everything is driven by **config files** (`configs/`) and scripts (`scripts/`).
 A run is never started by typing training flags by hand.
 
 ## Layout
 
 ```
-configs/repro/         reproduction of the CrossQ paper (Walker2d, Fig. 5)
+configs/repro/          reproduction of the CrossQ paper (Walker2d, Fig. 5): authors' code, unmodified
+configs/pilot/          Hand Reach pilot: fatigue off vs fatigue drift, SAC vs CrossQ (1 seed)
+src/fatigue_drift.py    OUR CODE: fatigue that increases over training (registers *Drift-v0 tasks)
+patches/crossq_coursework.patch   OUR CHANGES to the authors' train.py (2 small edits)
 scripts/run_experiment.sh   runs ONE config with ONE seed and records everything
 scripts/run_batch.sh        runs several config:seed jobs over the available GPUs
-results/raw/<run_id>/  one folder per run (created automatically)
-results/run_log.md     one line per run (created automatically); fill in the notes column
+scripts/random_baseline.sh  random-policy reference for a config's task
+scripts/analyze_repro.py    reproduction figure and table from the raw results
+results/raw/<run_id>/   one folder per run (created automatically)
+results/run_log.md      one line per run (created automatically)
+notes/run_notes.md      what was run, why, and what happened (written by hand)
 ```
 
 ## Code used
 
-- `CrossQ-baseline/`: the authors' code (github.com/adityab/CrossQ), commit
-  `a318a266679bec3f9d93c44e029860a6da077c89`, **unmodified**. Used for the reproduction.
-- Each run records the commit and the number of changed files (`code_files_changed`) in
-  its `meta.txt`, so it can be shown that the reproduction used unmodified code.
+| Folder | What | Used for |
+|---|---|---|
+| `CrossQ-baseline/` | authors' code (github.com/adityab/CrossQ), commit `a318a266679bec3f9d93c44e029860a6da077c89`, **unmodified** | reproduction (`configs/repro/`) |
+| `CrossQ-dev/` | same commit **+ `patches/crossq_coursework.patch`** | MyoSuite experiments (`configs/pilot/`, later `configs/main/`) |
 
-## Software environment for the reproduction
+The patch makes exactly two changes to `train.py`:
+1. `import fatigue_drift`, which registers MyoSuite and our fatigue-drift tasks (`src/` is on `PYTHONPATH`).
+2. The number of evaluation episodes is read from `N_EVAL_EPISODES` (default 1, as in the original).
+   MyoSuite tasks draw random targets, so we evaluate on 10 episodes.
 
-Installed in the order given in the authors' README:
+Each run records the code commit, the number of changed files (`code_files_changed`) and the
+full diff (`code.diff`), so it is always visible which code a result came from.
 
+## Fatigue drift (our contribution's experimental condition)
+
+MyoSuite's built-in fatigue (`myoFati*` tasks) resets at every 2-second episode and builds up far
+too slowly to matter (about 25 s of maximal effort for 20% fatigue). `src/fatigue_drift.py`
+instead starts each episode with a prescribed fatigued fraction of every muscle, which follows a
+schedule over **training** steps. See the docstring in that file for details. Settings come from
+the config's `ENV_VARS`:
+
+| Variable | Meaning |
+|---|---|
+| `FATIGUE_MAX` | final fatigued fraction (0 = control: fatigue off) |
+| `FATIGUE_RAMP_START`, `FATIGUE_RAMP_STEPS` | linear ramp from 0 to `FATIGUE_MAX` |
+| `FATIGUE_FIXED` | constant level instead (random baseline, post-hoc evaluation) |
+| `N_EVAL_EPISODES` | evaluation episodes per checkpoint |
+
+The control (`FATIGUE_MAX=0`) uses the same task, so both conditions share MyoSuite's fatigue
+activation dynamics and differ only in the fatigue level. Each environment is constructed with a
+seed derived from the run's seed (`RUN_SEED`), so MyoSuite's random targets are repeatable.
+
+## Software environments
+
+**Reproduction (`env-repro`)**, installed in the order given in the authors' README:
 1. Python 3.11.5 virtual environment
 2. `pip install -e CrossQ-baseline` (pins mujoco 2.3.7, gymnasium 0.29.1, torch 2.1.2, ...)
 3. `pip install "jax[cuda12_pip]==0.4.19" "nvidia-cudnn-cu12==8.9.7.29" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html`
 
-Step 3 upgrades several shared NVIDIA libraries beyond torch 2.1.2's exact pins (pip prints a
-dependency warning about torch). This is expected: torch is only imported by
-Stable-Baselines3 and never used for computation; JAX does the training.
-The cuDNN pin (8.9.7.29) is an addition to the README.
+Step 3 upgrades shared NVIDIA libraries beyond torch 2.1.2's pins (pip prints a warning). torch is
+only imported by Stable-Baselines3, never used for computation. The cuDNN pin is our addition.
+
+**MyoSuite experiments (`env-dev`)**: Python 3.11.5; `CrossQ-dev` + `myosuite==2.8.4` +
+`jax[cuda12_pip]==0.4.19`, with mujoco overridden to 3.1.2 (CrossQ pins 2.3.7, which no
+gymnasium-based MyoSuite release supports). MyoSuite pulls in torch 2.0.1, whose CUDA 11
+libraries overwrite files JAX needs, so `nvidia-cusolver-cu12` and
+`nvidia-cudnn-cu12==8.9.7.29` are reinstalled last.
 
 ## Commands
 
@@ -42,8 +78,12 @@ scripts/run_experiment.sh configs/repro/walker2d_crossq.cfg 1 0     # config, se
 # several runs, spread over the GPUs (PER_GPU runs share each GPU)
 PER_GPU=1 scripts/run_batch.sh configs/repro/walker2d_sac.cfg:1 configs/repro/walker2d_crossq.cfg:1
 
-# random-policy reference ("learns above random"), 100 episodes, for a config's environment
-scripts/random_baseline.sh configs/repro/walker2d_sac.cfg 100 0     # -> results/random/
+# random-policy reference, 100 episodes (drift tasks need a fixed fatigue level)
+scripts/random_baseline.sh configs/repro/walker2d_sac.cfg 100 0
+FATIGUE_FIXED=0.6 scripts/random_baseline.sh configs/pilot/handreach_sac_drift.cfg 100 0
+
+# reproduction figure and table from the raw results (needs numpy + matplotlib)
+python scripts/analyze_repro.py results     # -> figures/repro_walker2d.*, tables/repro_walker2d.*
 ```
 
 ## What each run folder contains
@@ -51,11 +91,11 @@ scripts/random_baseline.sh configs/repro/walker2d_sac.cfg 100 0     # -> results
 | File | Content |
 |---|---|
 | `config.cfg` | copy of the config used |
-| `meta.txt` | run id, exact command, code commit, changed files, Python, GPU, start/end, minutes, exit code |
-| `code.diff` | changes to the code directory (empty for the reproduction) |
+| `meta.txt` | run id, env vars, exact command, code commit, changed files, Python, GPU, start/end, minutes, exit code |
+| `code.diff` | changes to the code directory (empty for the reproduction; the patch for MyoSuite runs) |
 | `packages.txt` | exact versions of every installed package |
-| `train.log` | everything the training script printed |
-| `evaluations.npz` | evaluation returns over training: the raw result |
+| `train.log` | everything the training script printed (including the fatigue schedule used) |
+| `evaluations.npz` | evaluation returns (and, for MyoSuite, success = solved) over training: the raw result |
 | `eval_logs/`, `logs/` | the training script's own output (evaluation logs, TensorBoard) |
 
 Note: `train.py` names its output folders `SAC_...` for both algorithms, because the authors
