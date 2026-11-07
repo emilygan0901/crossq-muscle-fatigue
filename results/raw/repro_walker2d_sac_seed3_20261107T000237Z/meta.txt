@@ -1,0 +1,18 @@
+run_id: repro_walker2d_sac_seed3_20261107T000237Z
+config: configs/repro/walker2d_sac.cfg
+seed: 3
+command: /kaggle/working/env-repro/bin/python /kaggle/working/CrossQ-baseline/train.py -env Walker2d-v4 -seed 3 -total_timesteps 500000 -log_freq 1000 -wandb_mode disabled -algo sac -critic_activation relu -lr 0.001 -utd 1 -policy_delay 1 -adam_b1 0.9 -crossq_style 0 -bn 0 -ln 0 -n_critics 2 -n_neurons 256 -bn_mode brn_actor -bn_momentum 0.99 -eval_qbias 0
+code_dir: /kaggle/working/CrossQ-baseline
+code_commit: a318a266679bec3f9d93c44e029860a6da077c89
+code_files_changed: 0
+kit_commit: be85cdc2800793249c60fcc616a661582d81cddb
+kit_files_changed: 3
+python: Python 3.11.5
+jax_platform: cuda
+gpu: Tesla T4, 580.178.04
+host: fc9a68d9c7cc
+start_utc: 2026-11-07T00:02:37Z
+end_utc: 2026-11-07T00:51:15Z
+wall_minutes: 49
+exit_code: 0
+evaluations_npz: yes
