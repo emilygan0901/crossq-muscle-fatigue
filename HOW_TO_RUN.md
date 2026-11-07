@@ -8,6 +8,11 @@ A run is never started by typing training flags by hand.
 ```
 configs/repro/          reproduction of the CrossQ paper (Walker2d, Fig. 5): authors' code, unmodified
 configs/pilot/          Hand Reach pilot: fatigue off vs fatigue drift, SAC vs CrossQ (1 seed)
+configs/main/           main experiment: SAC/CrossQ x no fatigue / fixed 0.5 / drift 0->0.5 (seeds 11-15)
+configs/bridge/         Walker2d reproduction settings run in the MyoSuite software setup
+HYPOTHESIS.md           pre-registered hypotheses, metrics, decision rules and batch plan
+tests/test_fatigue_drift.py       checks of src/fatigue_drift.py (CPU, ~1 min)
+scripts/check_builtin_fatigue.py  measures how little MyoSuite's built-in fatigue changes a task
 src/fatigue_drift.py    OUR CODE: fatigue that increases over training (registers *Drift-v0 tasks)
 patches/crossq_coursework.patch   OUR CHANGES to the authors' train.py (2 small edits)
 scripts/run_experiment.sh   runs ONE config with ONE seed and records everything
@@ -46,7 +51,7 @@ the config's `ENV_VARS`:
 |---|---|
 | `FATIGUE_MAX` | final fatigued fraction (0 = control: fatigue off) |
 | `FATIGUE_RAMP_START`, `FATIGUE_RAMP_STEPS` | linear ramp from 0 to `FATIGUE_MAX` |
-| `FATIGUE_FIXED` | constant level instead (random baseline, post-hoc evaluation) |
+| `FATIGUE_FIXED` | constant level instead of the schedule (the Fixed condition; random baseline) |
 | `N_EVAL_EPISODES` | evaluation episodes per checkpoint |
 
 The control (`FATIGUE_MAX=0`) uses the same task, so both conditions share MyoSuite's fatigue
@@ -81,6 +86,10 @@ PER_GPU=1 scripts/run_batch.sh configs/repro/walker2d_sac.cfg:1 configs/repro/wa
 # random-policy reference, 100 episodes (drift tasks need a fixed fatigue level)
 scripts/random_baseline.sh configs/repro/walker2d_sac.cfg 100 0
 FATIGUE_FIXED=0.6 scripts/random_baseline.sh configs/pilot/handreach_sac_drift.cfg 100 0
+
+# checks of the fatigue-drift module, and the built-in fatigue measurement (MyoSuite environment)
+PYTHONPATH=src python tests/test_fatigue_drift.py
+python scripts/check_builtin_fatigue.py results/builtin_fatigue.csv
 
 # reproduction figure and table from the raw results (needs numpy + matplotlib)
 python scripts/analyze_repro.py results     # -> figures/repro_walker2d.*, tables/repro_walker2d.*
