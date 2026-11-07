@@ -82,4 +82,12 @@ and SAC about 90 min per Hand Reach run, measured in the pilot).
 
 ## Amendments
 
-(none yet)
+**Amendment 1 (7 Nov 2026, before any main-experiment run).** Drift also acts as an easy-to-hard
+curriculum (full strength first), which may improve final performance and offset a
+non-stationarity penalty. H1 is therefore a conservative test: support means the penalty outweighs
+any curriculum benefit, while no difference or Drift > Fixed is reported as inconclusive about
+non-stationarity, not as evidence against it. H2 and H3 compare conditions that receive the same
+curriculum, so they remain interpretable either way. The largest drop in return during the ramp,
+relative to the Fixed run of the same seed, is reported as the most direct sign of disruption.
+Note on pairing: runs with the same seed share their initial network and first target; target
+sequences diverge afterwards because episodes end at different times.
