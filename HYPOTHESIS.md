@@ -72,8 +72,8 @@ updates at the default momentum, far shorter than the 400k-step drift.
 
 | Batch | Runs | Status |
 |---|---|---|
-| 1 | CrossQ Fixed + Drift, seeds 11-13 (6 runs) | planned |
-| 2 | CrossQ Fixed + Drift seeds 14-15; CrossQ no fatigue seeds 11-12 (6 runs) | planned |
+| 1 | CrossQ Fixed + Drift, seeds 11-13 (6 runs) | done 8 Nov (all exit 0, ~140 min each; rule 1 passed) |
+| 2 | CrossQ Fixed + Drift seeds 14-15; CrossQ no fatigue seeds 11-12 (6 runs); plus pilot `configs/pilot/handreach_crossqln_nofatigue.cfg` (CrossQ with LayerNorm, seed 1) to decide H3 | planned |
 | 3 | CrossQ no fatigue seeds 13-15; SAC Fixed + Drift seeds 11-13 (9 runs) | planned |
 | 4 | SAC Fixed + Drift seeds 14-15; SAC no fatigue seeds 11-15; Walker2d bridge in the MyoSuite software setup (MuJoCo 3.1.2 + patch), 1 seed per algorithm (11 runs) | planned |
 

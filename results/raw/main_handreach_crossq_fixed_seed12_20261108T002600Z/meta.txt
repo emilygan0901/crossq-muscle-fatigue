@@ -1,0 +1,19 @@
+run_id: main_handreach_crossq_fixed_seed12_20261108T002600Z
+config: configs/main/handreach_crossq_fixed.cfg
+seed: 12
+env_vars: RUN_SEED=12 N_EVAL_EPISODES=10 FATIGUE_FIXED=0.5
+command: /kaggle/working/env-dev/bin/python /kaggle/working/CrossQ-dev/train.py -env myoFatiHandReachRandomDrift-v0 -seed 12 -total_timesteps 500000 -log_freq 1000 -wandb_mode disabled -algo sac -critic_activation relu -lr 0.001 -utd 1 -policy_delay 3 -adam_b1 0.5 -crossq_style 1 -bn 1 -ln 0 -n_critics 2 -n_neurons 2048 -bn_mode brn_actor -bn_momentum 0.99 -eval_qbias 0
+code_dir: /kaggle/working/CrossQ-dev
+code_commit: a318a266679bec3f9d93c44e029860a6da077c89
+code_files_changed: 1
+kit_commit: bdf58eb42f07f4c9088adec1b6edec01cb454504
+kit_files_changed: 0
+python: Python 3.11.5
+jax_platform: cuda
+gpu: Tesla T4, 580.178.04
+host: 16a2b940c822
+start_utc: 2026-11-08T00:26:00Z
+end_utc: 2026-11-08T02:48:22Z
+wall_minutes: 142
+exit_code: 0
+evaluations_npz: yes

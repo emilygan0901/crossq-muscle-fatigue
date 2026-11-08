@@ -1,0 +1,3 @@
+task,max_episode_seconds,episode_steps_at_max_effort,episode_seconds_at_max_effort,max_fatigued_fraction_in_episode,fatigued_fraction_after_reset,seconds_max_effort_to_20pct,seconds_max_effort_to_50pct
+myoFatiElbowPose1D6MRandom-v0,2.0,100,2.0,0.0166,0.0,24.5,76.4
+myoFatiHandReachRandom-v0,2.0,2,0.04,0.0002,0.0,24.5,76.4

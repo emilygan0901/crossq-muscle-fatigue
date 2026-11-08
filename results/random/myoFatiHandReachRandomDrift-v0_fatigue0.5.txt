@@ -1,0 +1,11 @@
+MyoSuite:> Registering Myo Envs
+    MyoSuite: A contact-rich simulation suite for musculoskeletal motor control
+        Vittorio Caggiano, Huawei Wang, Guillaume Durandau, Massimo Sartori, Vikash Kumar
+        L4DC-2019 | https://sites.google.com/view/myosuite
+    
+myoFatiHandReachRandomDrift-v0: random policy over 100 episodes: return mean -49.5 (sd 3.8), median -50.4, mean length 4
+config: configs/main/handreach_crossq_drift.cfg
+fatigue_fixed: 0.5
+python: Python 3.11.5
+packages: mujoco 3.1.2 gymnasium 0.29.1
+date_utc: 2026-11-07T22:08:17Z
