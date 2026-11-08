@@ -19,6 +19,8 @@ scripts/run_experiment.sh   runs ONE config with ONE seed and records everything
 scripts/run_batch.sh        runs several config:seed jobs over the available GPUs
 scripts/random_baseline.sh  random-policy reference for a config's task
 scripts/analyze_repro.py    reproduction figure and table from the raw results
+scripts/analyze_h1.py       primary test H1 (Fixed vs Drift, final 100k steps)
+scripts/analyze_ramp.py     secondary metric: largest drop in return during the ramp
 results/raw/<run_id>/   one folder per run (created automatically)
 results/run_log.md      one line per run (created automatically)
 notes/run_notes.md      what was run, why, and what happened (written by hand)
@@ -93,6 +95,8 @@ python scripts/check_builtin_fatigue.py results/builtin_fatigue.csv
 
 # reproduction figure and table from the raw results (needs numpy + matplotlib)
 python scripts/analyze_repro.py results     # -> figures/repro_walker2d.*, tables/repro_walker2d.*
+python scripts/analyze_h1.py results        # -> tables/h1_crossq.md (primary test H1)
+python scripts/analyze_ramp.py results      # -> figures/ramp_crossq.*, tables/ramp_crossq.md (dip during the ramp)
 ```
 
 ## What each run folder contains
