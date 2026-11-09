@@ -21,6 +21,7 @@ scripts/random_baseline.sh  random-policy reference for a config's task
 scripts/analyze_repro.py    reproduction figure and table from the raw results
 scripts/analyze_h1.py       primary test H1 (Fixed vs Drift, final 100k steps)
 scripts/analyze_ramp.py     secondary metric: largest drop in return during the ramp
+scripts/analyze_main.py     main figures and tables (curves, paired differences, results, hypotheses, compute)
 results/raw/<run_id>/   one folder per run (created automatically)
 results/run_log.md      one line per run (created automatically)
 notes/run_notes.md      what was run, why, and what happened (written by hand)
@@ -97,6 +98,7 @@ python scripts/check_builtin_fatigue.py results/builtin_fatigue.csv
 python scripts/analyze_repro.py results     # -> figures/repro_walker2d.*, tables/repro_walker2d.*
 python scripts/analyze_h1.py results        # -> tables/h1_crossq.md (primary test H1)
 python scripts/analyze_ramp.py results      # -> figures/ramp_crossq.*, tables/ramp_crossq.md (dip during the ramp)
+python scripts/analyze_main.py results      # -> figures/{schedules,main_curves,main_differences}.*, tables/{main_results,hypotheses,settings_compute}.*
 ```
 
 ## What each run folder contains
