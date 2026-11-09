@@ -27,3 +27,12 @@
 | main_handreach_crossq_nofatigue_seed11_20261108T165212Z | configs/main/handreach_crossq_nofatigue.cfg | 11 | 0 | 137 | |
 | main_handreach_crossq_drift_seed15_20261108T165157Z | configs/main/handreach_crossq_drift.cfg | 15 | 0 | 139 | |
 | main_handreach_crossq_nofatigue_seed12_20261108T190851Z | configs/main/handreach_crossq_nofatigue.cfg | 12 | 0 | 131 | |
+| main_handreach_crossq_nofatigue_seed13_20261109T122019Z | configs/main/handreach_crossq_nofatigue.cfg | 13 | 0 | 135 | |
+| main_handreach_crossq_nofatigue_seed14_20261109T122021Z | configs/main/handreach_crossq_nofatigue.cfg | 14 | 0 | 135 | |
+| main_handreach_sac_fixed_seed11_20261109T143531Z | configs/main/handreach_sac_fixed.cfg | 11 | 0 | 79 | |
+| main_handreach_crossq_nofatigue_seed15_20261109T143449Z | configs/main/handreach_crossq_nofatigue.cfg | 15 | 0 | 137 | |
+| main_handreach_sac_drift_seed11_20261109T155447Z | configs/main/handreach_sac_drift.cfg | 11 | 0 | 84 | |
+| main_handreach_sac_nofatigue_seed11_20261109T165219Z | configs/main/handreach_sac_nofatigue.cfg | 11 | 0 | 94 | |
+| main_handreach_sac_fixed_seed12_20261109T171902Z | configs/main/handreach_sac_fixed.cfg | 12 | 0 | 93 | |
+| main_handreach_sac_drift_seed12_20261109T182637Z | configs/main/handreach_sac_drift.cfg | 12 | 0 | 87 | |
+| main_handreach_sac_nofatigue_seed12_20261109T185221Z | configs/main/handreach_sac_nofatigue.cfg | 12 | 0 | 82 | |

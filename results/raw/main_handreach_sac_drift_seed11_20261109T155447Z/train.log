@@ -1,0 +1,577 @@
+/kaggle/working/env-dev/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/kaggle/working/env-dev/lib/python3.11/site-packages/torch/utils/tensorboard/__init__.py:4: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if not hasattr(tensorboard, "__version__") or LooseVersion(
+/kaggle/working/env-dev/lib/python3.11/site-packages/torch/utils/tensorboard/__init__.py:6: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ) < LooseVersion("1.15"):
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/linen/module.py:77: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  KeyArray = Union[jax.Array, jax.random.KeyArray]  # pylint: disable=invalid-name
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/linen/recurrent.py:45: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  PRNGKey = jax.random.KeyArray
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/linen/recurrent.py:753: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  init_key: Optional[random.KeyArray] = None,
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/linen/recurrent.py:979: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  init_key: Optional[random.KeyArray] = None,
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/linen/recurrent.py:1003: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  init_key: Optional[random.KeyArray] = None,
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/linen/stochastic.py:28: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  KeyArray = Union[jax.Array, jax.random.KeyArray]
+/kaggle/working/CrossQ-dev/sbx/sac/policies.py:379: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  def build(self, key: jax.random.KeyArray, lr_schedule: Schedule, qf_learning_rate: float) -> jax.random.KeyArray:
+/kaggle/working/CrossQ-dev/sbx/sac/policies.py:379: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  def build(self, key: jax.random.KeyArray, lr_schedule: Schedule, qf_learning_rate: float) -> jax.random.KeyArray:
+/kaggle/working/CrossQ-dev/sbx/sac/sac.py:264: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  key: jax.random.KeyArray,
+/kaggle/working/CrossQ-dev/sbx/sac/sac.py:360: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  key: jax.random.KeyArray,
+[fatigue_drift] training clock = first env created (myoFatiHandReachRandom-v0); FATIGUE_MAX=0.5 RAMP_START=0 RAMP_STEPS=400000 FIXED=
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/gymnasium/envs/registration.py:788: UserWarning: [33mWARN: The environment is being initialised with render_mode='rgb_array' that is not in the possible render_modes ([]).[0m
+  logger.warn(
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env-dev/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+WARNING:absl:Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.5440.
+MyoSuite:> Registering Myo Envs
+    MyoSuite: A contact-rich simulation suite for musculoskeletal motor control
+        Vittorio Caggiano, Huawei Wang, Guillaume Durandau, Massimo Sartori, Vikash Kumar
+        L4DC-2019 | https://sites.google.com/view/myosuite
+    
+Warning: Unused kwargs found: {'render_mode': 'rgb_array'}
+Warning: Unused kwargs found: {'render_mode': 'rgb_array'}
+Eval num_timesteps=1, episode_reward=-49.39 +/- 3.34
+Episode length: 6.30 +/- 5.27
+Success rate: 0.00%
+New best mean reward!
+Eval num_timesteps=5000, episode_reward=-50.64 +/- 0.50
+Episode length: 3.70 +/- 3.47
+Success rate: 0.00%
+Eval num_timesteps=10000, episode_reward=-46.17 +/- 13.42
+Episode length: 6.40 +/- 7.95
+Success rate: 0.00%
+New best mean reward!
+Eval num_timesteps=15000, episode_reward=9.94 +/- 62.34
+Episode length: 88.20 +/- 26.11
+Success rate: 0.00%
+New best mean reward!
+Eval num_timesteps=20000, episode_reward=41.35 +/- 123.73
+Episode length: 41.20 +/- 48.01
+Success rate: 0.00%
+New best mean reward!
+Eval num_timesteps=25000, episode_reward=41.66 +/- 66.30
+Episode length: 72.50 +/- 42.29
+Success rate: 0.00%
+New best mean reward!
+Eval num_timesteps=30000, episode_reward=-4.57 +/- 44.54
+Episode length: 74.90 +/- 25.95
+Success rate: 0.00%
+Eval num_timesteps=35000, episode_reward=-9.78 +/- 56.04
+Episode length: 39.20 +/- 42.50
+Success rate: 0.00%
+Eval num_timesteps=40000, episode_reward=-0.62 +/- 69.16
+Episode length: 55.20 +/- 40.94
+Success rate: 0.00%
+Eval num_timesteps=45000, episode_reward=5.45 +/- 99.26
+Episode length: 32.10 +/- 44.50
+Success rate: 0.00%
+Eval num_timesteps=50000, episode_reward=-50.39 +/- 0.03
+Episode length: 2.00 +/- 0.00
+Success rate: 0.00%
+Eval num_timesteps=55000, episode_reward=-19.66 +/- 87.83
+Episode length: 22.10 +/- 28.98
+Success rate: 0.00%
+Eval num_timesteps=60000, episode_reward=290.53 +/- 119.55
+Episode length: 90.40 +/- 28.80
+Success rate: 0.00%
+New best mean reward!
+Eval num_timesteps=65000, episode_reward=-8.50 +/- 125.67
+Episode length: 11.80 +/- 29.40
+Success rate: 0.00%
+Eval num_timesteps=70000, episode_reward=-17.88 +/- 42.25
+Episode length: 58.50 +/- 41.84
+Success rate: 0.00%
+Eval num_timesteps=75000, episode_reward=-11.86 +/- 72.78
+Episode length: 62.50 +/- 32.11
+Success rate: 0.00%
+Eval num_timesteps=80000, episode_reward=79.58 +/- 116.73
+Episode length: 66.00 +/- 34.50
+Success rate: 0.00%
+Eval num_timesteps=85000, episode_reward=152.43 +/- 181.14
+Episode length: 90.50 +/- 28.50
+Success rate: 0.00%
+Simulation couldn't be stepped as intended. Issuing a reset
+Eval num_timesteps=90000, episode_reward=-45.00 +/- 10.40
+Episode length: 14.90 +/- 4.85
+Success rate: 0.00%
+Eval num_timesteps=95000, episode_reward=0.58 +/- 76.53
+Episode length: 34.70 +/- 43.83
+Success rate: 0.00%
+Eval num_timesteps=100000, episode_reward=112.57 +/- 127.67
+Episode length: 70.60 +/- 44.91
+Success rate: 0.00%
+Eval num_timesteps=105000, episode_reward=206.56 +/- 140.75
+Episode length: 80.40 +/- 39.20
+Success rate: 0.00%
+Eval num_timesteps=110000, episode_reward=166.59 +/- 145.38
+Episode length: 80.40 +/- 39.20
+Success rate: 0.00%
+Eval num_timesteps=115000, episode_reward=-11.38 +/- 93.23
+Episode length: 21.00 +/- 29.81
+Success rate: 0.00%
+Eval num_timesteps=120000, episode_reward=29.41 +/- 98.28
+Episode length: 53.60 +/- 46.50
+Success rate: 0.00%
+Eval num_timesteps=125000, episode_reward=30.59 +/- 103.85
+Episode length: 41.50 +/- 47.77
+Success rate: 0.00%
+Eval num_timesteps=130000, episode_reward=20.37 +/- 97.80
+Episode length: 60.80 +/- 48.01
+Success rate: 0.00%
+Eval num_timesteps=135000, episode_reward=165.51 +/- 158.36
+Episode length: 80.80 +/- 38.41
+Success rate: 0.00%
+Eval num_timesteps=140000, episode_reward=101.71 +/- 136.24
+Episode length: 80.40 +/- 39.20
+Success rate: 0.00%
+Eval num_timesteps=145000, episode_reward=71.22 +/- 87.69
+Episode length: 94.40 +/- 12.23
+Success rate: 0.00%
+Eval num_timesteps=150000, episode_reward=148.35 +/- 160.95
+Episode length: 80.40 +/- 39.20
+Success rate: 0.00%
+Eval num_timesteps=155000, episode_reward=52.17 +/- 97.89
+Episode length: 64.00 +/- 44.95
+Success rate: 0.00%
+Eval num_timesteps=160000, episode_reward=43.44 +/- 68.98
+Episode length: 74.50 +/- 24.54
+Success rate: 0.00%
+Eval num_timesteps=165000, episode_reward=148.09 +/- 152.56
+Episode length: 90.20 +/- 29.40
+Success rate: 0.00%
+Eval num_timesteps=170000, episode_reward=143.86 +/- 165.68
+Episode length: 71.20 +/- 44.02
+Success rate: 0.00%
+Eval num_timesteps=175000, episode_reward=23.69 +/- 61.02
+Episode length: 91.90 +/- 22.07
+Success rate: 0.00%
+Eval num_timesteps=180000, episode_reward=-38.79 +/- 31.26
+Episode length: 30.70 +/- 28.19
+Success rate: 0.00%
+Eval num_timesteps=185000, episode_reward=19.20 +/- 55.20
+Episode length: 91.20 +/- 17.62
+Success rate: 0.00%
+Eval num_timesteps=190000, episode_reward=95.11 +/- 81.81
+Episode length: 89.00 +/- 29.22
+Success rate: 0.00%
+Eval num_timesteps=195000, episode_reward=102.32 +/- 91.91
+Episode length: 76.20 +/- 37.84
+Success rate: 0.00%
+Eval num_timesteps=200000, episode_reward=48.45 +/- 86.37
+Episode length: 72.20 +/- 42.67
+Success rate: 0.00%
+Eval num_timesteps=205000, episode_reward=294.91 +/- 99.87
+Episode length: 99.60 +/- 1.20
+Success rate: 0.00%
+New best mean reward!
+Eval num_timesteps=210000, episode_reward=96.31 +/- 147.68
+Episode length: 92.60 +/- 22.20
+Success rate: 0.00%
+Eval num_timesteps=215000, episode_reward=-26.36 +/- 30.00
+Episode length: 55.10 +/- 44.86
+Success rate: 0.00%
+Eval num_timesteps=220000, episode_reward=56.82 +/- 52.24
+Episode length: 100.00 +/- 0.00
+Success rate: 0.00%
+Eval num_timesteps=225000, episode_reward=28.49 +/- 108.02
+Episode length: 72.90 +/- 28.71
+Success rate: 0.00%
+Eval num_timesteps=230000, episode_reward=52.39 +/- 115.92
+Episode length: 51.00 +/- 49.00
+Success rate: 0.00%
+Eval num_timesteps=235000, episode_reward=128.17 +/- 149.71
+Episode length: 84.80 +/- 31.95
+Success rate: 0.00%
+Eval num_timesteps=240000, episode_reward=270.82 +/- 122.11
+Episode length: 100.00 +/- 0.00
+Success rate: 0.00%
+Eval num_timesteps=245000, episode_reward=211.61 +/- 170.19
+Episode length: 77.10 +/- 38.80
+Success rate: 0.00%
+Eval num_timesteps=250000, episode_reward=-36.55 +/- 16.87
+Episode length: 38.30 +/- 36.76
+Success rate: 0.00%
+Eval num_timesteps=255000, episode_reward=33.50 +/- 75.50
+Episode length: 87.90 +/- 29.44
+Success rate: 0.00%
+Eval num_timesteps=260000, episode_reward=-34.39 +/- 22.67
+Episode length: 34.30 +/- 43.39
+Success rate: 0.00%
+Eval num_timesteps=265000, episode_reward=65.02 +/- 110.50
+Episode length: 89.50 +/- 21.14
+Success rate: 0.00%
+Eval num_timesteps=270000, episode_reward=-38.81 +/- 19.03
+Episode length: 34.60 +/- 43.00
+Success rate: 0.00%
+Eval num_timesteps=275000, episode_reward=0.70 +/- 55.39
+Episode length: 81.50 +/- 23.38
+Success rate: 0.00%
+Eval num_timesteps=280000, episode_reward=11.53 +/- 62.64
+Episode length: 62.70 +/- 39.16
+Success rate: 0.00%
+Eval num_timesteps=285000, episode_reward=-14.21 +/- 101.13
+Episode length: 15.80 +/- 28.17
+Success rate: 0.00%
+Eval num_timesteps=290000, episode_reward=-34.84 +/- 23.42
+Episode length: 49.40 +/- 36.38
+Success rate: 0.00%
+Eval num_timesteps=295000, episode_reward=204.73 +/- 108.52
+Episode length: 100.00 +/- 0.00
+Success rate: 0.00%
+Eval num_timesteps=300000, episode_reward=-38.45 +/- 21.28
+Episode length: 37.20 +/- 42.80
+Success rate: 0.00%
+Eval num_timesteps=305000, episode_reward=283.73 +/- 117.87
+Episode length: 100.00 +/- 0.00
+Success rate: 0.00%
+Eval num_timesteps=310000, episode_reward=64.31 +/- 85.09
+Episode length: 70.00 +/- 33.75
+Success rate: 0.00%
+Eval num_timesteps=315000, episode_reward=40.83 +/- 117.05
+Episode length: 80.00 +/- 30.58
+Success rate: 0.00%
+Eval num_timesteps=320000, episode_reward=9.25 +/- 35.00
+Episode length: 100.00 +/- 0.00
+Success rate: 0.00%
+Eval num_timesteps=325000, episode_reward=-22.33 +/- 49.41
+Episode length: 37.90 +/- 42.47
+Success rate: 0.00%
+Eval num_timesteps=330000, episode_reward=92.87 +/- 158.00
+Episode length: 64.80 +/- 44.48
+Success rate: 0.00%
+Eval num_timesteps=335000, episode_reward=106.38 +/- 142.12
+Episode length: 80.10 +/- 39.06
+Success rate: 0.00%
+Eval num_timesteps=340000, episode_reward=-32.50 +/- 29.42
+Episode length: 60.90 +/- 32.84
+Success rate: 0.00%
+Eval num_timesteps=345000, episode_reward=93.61 +/- 140.33
+Episode length: 98.40 +/- 4.80
+Success rate: 0.00%
+Eval num_timesteps=350000, episode_reward=127.75 +/- 131.64
+Episode length: 73.30 +/- 40.85
+Success rate: 0.00%
+Eval num_timesteps=355000, episode_reward=111.49 +/- 134.47
+Episode length: 88.90 +/- 22.89
+Success rate: 0.00%
+Eval num_timesteps=360000, episode_reward=89.76 +/- 173.14
+Episode length: 51.00 +/- 49.00
+Success rate: 0.00%
+Eval num_timesteps=365000, episode_reward=184.66 +/- 160.42
+Episode length: 80.40 +/- 39.20
+Success rate: 0.00%
+Eval num_timesteps=370000, episode_reward=37.07 +/- 55.22
+Episode length: 100.00 +/- 0.00
+Success rate: 0.00%
+Eval num_timesteps=375000, episode_reward=17.62 +/- 107.09
+Episode length: 80.00 +/- 30.36
+Success rate: 0.00%
+Eval num_timesteps=380000, episode_reward=81.25 +/- 142.45
+Episode length: 71.30 +/- 43.88
+Success rate: 0.00%
+Eval num_timesteps=385000, episode_reward=28.78 +/- 53.39
+Episode length: 90.20 +/- 21.11
+Success rate: 0.00%
+Eval num_timesteps=390000, episode_reward=7.55 +/- 72.71
+Episode length: 67.20 +/- 42.90
+Success rate: 0.00%
+Eval num_timesteps=395000, episode_reward=153.34 +/- 67.55
+Episode length: 99.60 +/- 1.20
+Success rate: 0.00%
+Eval num_timesteps=400000, episode_reward=162.65 +/- 192.41
+Episode length: 80.70 +/- 38.61
+Success rate: 0.00%
+Eval num_timesteps=405000, episode_reward=115.63 +/- 146.61
+Episode length: 78.60 +/- 32.00
+Success rate: 0.00%
+Eval num_timesteps=410000, episode_reward=215.10 +/- 91.80
+Episode length: 99.50 +/- 1.50
+Success rate: 0.00%
+Eval num_timesteps=415000, episode_reward=139.43 +/- 144.15
+Episode length: 80.40 +/- 39.20
+Success rate: 0.00%
+Eval num_timesteps=420000, episode_reward=11.82 +/- 108.69
+Episode length: 69.60 +/- 44.35
+Success rate: 0.00%
+Eval num_timesteps=425000, episode_reward=-21.51 +/- 47.03
+Episode length: 33.90 +/- 43.32
+Success rate: 0.00%
+Eval num_timesteps=430000, episode_reward=115.49 +/- 172.47
+Episode length: 92.40 +/- 18.87
+Success rate: 0.00%
+Eval num_timesteps=435000, episode_reward=-6.98 +/- 46.22
+Episode length: 65.30 +/- 43.88
+Success rate: 0.00%
+Eval num_timesteps=440000, episode_reward=182.87 +/- 116.62
+Episode length: 83.70 +/- 28.73
+Success rate: 0.00%
+Eval num_timesteps=445000, episode_reward=-27.06 +/- 20.31
+Episode length: 63.00 +/- 45.53
+Success rate: 0.00%
+Eval num_timesteps=450000, episode_reward=-36.00 +/- 22.66
+Episode length: 31.40 +/- 44.91
+Success rate: 0.00%
+Eval num_timesteps=455000, episode_reward=120.68 +/- 165.94
+Episode length: 62.10 +/- 46.46
+Success rate: 0.00%
+Eval num_timesteps=460000, episode_reward=38.58 +/- 102.98
+Episode length: 76.00 +/- 39.22
+Success rate: 0.00%
+Eval num_timesteps=465000, episode_reward=195.23 +/- 160.17
+Episode length: 90.20 +/- 29.40
+Success rate: 0.00%
+Eval num_timesteps=470000, episode_reward=37.86 +/- 71.65
+Episode length: 90.20 +/- 29.40
+Success rate: 0.00%
+Eval num_timesteps=475000, episode_reward=68.45 +/- 136.99
+Episode length: 51.60 +/- 48.43
+Success rate: 0.00%
+Eval num_timesteps=480000, episode_reward=119.85 +/- 105.48
+Episode length: 96.70 +/- 9.90
+Success rate: 0.00%
+Eval num_timesteps=485000, episode_reward=157.07 +/- 146.66
+Episode length: 81.50 +/- 37.00
+Success rate: 0.00%
+Eval num_timesteps=490000, episode_reward=157.38 +/- 160.72
+Episode length: 78.20 +/- 34.95
+Success rate: 0.00%
+Eval num_timesteps=495000, episode_reward=47.41 +/- 117.86
+Episode length: 60.80 +/- 48.01
+Success rate: 0.00%
+Eval num_timesteps=500000, episode_reward=70.72 +/- 103.64
+Episode length: 92.40 +/- 22.80
+Success rate: 0.00%
+ 100% ━━━━━━━━━━━━━━━━━━━━━━━━━ 500,000/500,000  [ 1:23:58 < 0:00:00 , 80 it/s ]
