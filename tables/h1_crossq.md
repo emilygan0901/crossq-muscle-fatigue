@@ -7,3 +7,4 @@
 | 15 | - | 482 | 389 | +93 | 0.36 / 0.17 |
 
 Mean d = -5.9, 95% bootstrap CI [-62.1, 51.8], 5 seeds: H1 INCONCLUSIVE.
+SD of d = 68.9. Minimum detectable effect (80% power, alpha 0.05, paired t): 115.

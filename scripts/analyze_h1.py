@@ -5,6 +5,10 @@
 Per run: mean evaluation return over the 20 evaluations after 400k steps (405k-500k, 200 episodes).
 Per seed: d = Fixed - Drift. H1 supported if the 95% bootstrap CI of mean d (10,000 resamples of
 seeds) lies entirely above 0; contradicted if entirely below 0; otherwise inconclusive.
+
+Minimum detectable effect (Amendment 2): the smallest true mean difference that a paired two-sided
+t-test at alpha = 0.05 would detect with 80% power, given the observed SD of d over n seeds:
+MDE = (t_{0.975, n-1} + t_{0.80, n-1}) * SD(d) / sqrt(n).
 """
 import glob
 import os
@@ -37,8 +41,12 @@ for s in seeds:
 d = np.array([fixed[s][0] - drift[s][0] for s in seeds])
 boot = np.random.default_rng(0).choice(d, (10_000, len(d))).mean(1)
 lo, hi = np.percentile(boot, [2.5, 97.5])
+from scipy import stats  # noqa: E402
+n = len(d)
+mde = (stats.t.ppf(0.975, n - 1) + stats.t.ppf(0.80, n - 1)) * d.std(ddof=1) / np.sqrt(n)
 verdict = "SUPPORTED" if lo > 0 else "CONTRADICTED" if hi < 0 else "INCONCLUSIVE"
 lines.append(f"\nMean d = {d.mean():+.1f}, 95% bootstrap CI [{lo:.1f}, {hi:.1f}], {len(d)} seeds: H1 {verdict}.")
+lines.append(f"SD of d = {d.std(ddof=1):.1f}. Minimum detectable effect (80% power, alpha 0.05, paired t): {mde:.0f}.")
 text = "\n".join(lines)
 print(text)
 os.makedirs("tables", exist_ok=True)

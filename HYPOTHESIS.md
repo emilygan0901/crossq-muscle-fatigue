@@ -74,8 +74,9 @@ updates at the default momentum, far shorter than the 400k-step drift.
 |---|---|---|
 | 1 | CrossQ Fixed + Drift, seeds 11-13 (6 runs) | done 8 Nov (all exit 0, ~140 min each; rule 1 passed) |
 | 2 | CrossQ Fixed + Drift seeds 14-15; CrossQ no fatigue seeds 11-12 (6 runs); plus pilot `configs/pilot/handreach_crossqln_nofatigue.cfg` (CrossQ with LayerNorm, seed 1) to decide H3 | done 8 Nov (all exit 0, 131-141 min each). H1 after seeds 11-15: inconclusive (`tables/h1_crossq.md`), so decision rule 2 applies |
-| 3 | CrossQ no fatigue seeds 13-15; SAC Fixed + Drift seeds 11-13 (9 runs) | planned |
-| 4 | SAC Fixed + Drift seeds 14-15; SAC no fatigue seeds 11-15; Walker2d bridge in the MyoSuite software setup (MuJoCo 3.1.2 + patch), 1 seed per algorithm (11 runs) | planned |
+| 3 | CrossQ no fatigue seeds 13-15; SAC Fixed + Drift + No fatigue seeds 11-12 (9 runs) | planned |
+| 4 | SAC Fixed + Drift + No fatigue seeds 13-15; Walker2d bridge (MuJoCo 3.1.2 + patch), 1 seed per algorithm (11 runs) | planned |
+| 5 onwards | Rule 2: seeds 16-18 for all six main conditions (18 runs); Sudden, CrossQ and SAC seeds 11-15 (10 runs) | planned (Amendment 2) |
 
 Each batch is sized to finish within Kaggle's 12-hour session limit on 2x T4 (CrossQ about 171 min
 and SAC about 90 min per Hand Reach run, measured in the pilot).
@@ -91,3 +92,55 @@ curriculum, so they remain interpretable either way. The largest drop in return 
 relative to the Fixed run of the same seed, is reported as the most direct sign of disruption.
 Note on pairing: runs with the same seed share their initial network and first target; target
 sequences diverge afterwards because episodes end at different times.
+
+**Amendment 2 (9 Nov 2026, before any run of the Sudden condition and before any SAC run on Hand Reach).**
+
+*Results that prompted it.* After seeds 11-15, H1 is inconclusive (`tables/h1_crossq.md`), so
+decision rule 2 applies: seeds 16-18 are added to every condition of the main experiment (SAC and
+CrossQ; No fatigue, Fixed, Drift). The pre-registered secondary metric shows no larger dip under
+Drift than under Fixed during the ramp (`tables/ramp_crossq.md`).
+
+*H3 is withdrawn.* The single-seed LayerNorm pilot (`configs/pilot/handreach_crossqln_nofatigue.cfg`)
+did not learn the task (return 226, 0% solved, against about 585 for CrossQ with Batch
+Renormalization). A variant that does not learn cannot show whether batch statistics matter, so the
+pilot is reported as uninformative, as evidence neither for nor against a normalisation effect.
+
+*New condition: Sudden.* Full strength (level 0) for steps 0-250k, then level 0.5 from step 250k to
+500k (`configs/main/handreach_{crossq,sac}_sudden.cfg`; `FATIGUE_RAMP_START=250000
+FATIGUE_RAMP_STEPS=1`). Same task, step budget (500k), evaluation protocol and hyperparameters as the
+other conditions. Seeds 11-15 for both CrossQ and SAC, paired with the existing conditions. Rule 2
+does not extend to this condition. A planned "fast" condition (ramp over 100k steps) and a
+smaller-replay-buffer condition are not run, to keep compute within budget and headroom for reruns.
+Both are named as future work.
+
+**H4.** For CrossQ, mean evaluation return over the 100k steps after the change (the 20 evaluations
+at 255k-350k, where both conditions are at level 0.5) is lower under Sudden than under Fixed. Same
+paired bootstrap rule as H1 (d = Fixed - Sudden).
+
+**H5.** The Sudden penalty (Fixed - Sudden, same window) is larger for CrossQ than for SAC
+(per-seed difference-in-differences, same bootstrap rule). H2 and H5 together show whether any
+effect of change is specific to CrossQ's batch-normalised design or general to off-policy RL.
+
+*Secondary (Sudden).* The return at the first evaluation after the jump (255k) measures the
+immediate cost of weaker muscles for a policy trained at full strength. Whether return then falls
+further or recovers over 255k-350k shows whether learning itself is disrupted. The final window
+(405k-500k) is also reported.
+
+*Minimum detectable effect.* For every paired test (H1, H2, H4, H5), the smallest true mean
+difference detectable with 80% power by a two-sided paired t-test at alpha = 0.05 is reported:
+MDE = (t_{0.975,n-1} + t_{0.80,n-1}) x SD(d) / sqrt(n), using the observed SD of the per-seed
+differences. A non-significant result is interpreted as "no effect larger than the MDE".
+
+*Interpretation fixed in advance.* Sudden also trains at full strength first (curriculum), so, as in
+Amendment 1, no difference means "no detectable penalty", not evidence against non-stationarity
+effects. If CrossQ is unaffected by gradual drift but penalised by sudden change, the conclusion is
+that its robustness depends on the rate of change. If neither condition harms it, CrossQ is reported
+as robust to this kind of change in force capacity, within the stated MDE.
+
+*Hyperparameters.* Neither algorithm is tuned for Hand Reach. Both use the authors' published
+settings (`configs/main/`), so the tuning budget is equal (zero) for both.
+
+*Compute.* About 87 GPU-hours remain (Kaggle, 2x T4), plus about 10 GPU-hours kept in reserve for
+reruns of failed runs (rule 3). If the quota does not allow all runs before the end of December,
+the Sudden condition is reduced to seeds 11-13 for both algorithms, and this is reported.
+
