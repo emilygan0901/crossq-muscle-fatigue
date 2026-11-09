@@ -285,34 +285,43 @@ def band(algo, cond, smooth=3):
     return tt, Y.mean(0), lo, hi, len(ss)
 
 
-fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.4), sharey=True)
-for ax, (a, al) in zip(axes, ALGOS):
-    ns = []
-    for c, cl, col in CONDS:
-        b = band(a, c)
-        if b is None:
-            continue
-        tt, m, lo, hi, n = b
-        ns.append(f"{cl}: {n}")
-        if lo is not None:
-            ax.fill_between(tt / 1000, lo, hi, color=col, alpha=0.18, linewidth=0)
-        ax.plot(tt / 1000, m, color=col, linewidth=1.6, label=cl)
-    if "0" in random_ref:
-        ax.axhline(random_ref["0"], color=MUTED, linestyle=(0, (3, 3)), linewidth=1)
-        ax.text(495, random_ref["0"] + 10, "random policy", color=MUTED, fontsize=7, ha="right")
-    counts = sorted({x.split(": ")[1] for x in ns})
-    ax.set_title(f"{al} ({'/'.join(counts)} seeds per condition)", fontsize=9)
-    ax.set_xlabel("Training steps (thousands)")
-    ax.grid(axis="y", color=GRID, linewidth=0.6)
-    for side in ("top", "right"):
-        ax.spines[side].set_visible(False)
-axes[0].set_ylabel("Evaluation return")
-h, l = axes[0].get_legend_handles_labels()
-fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 1.07), ncol=4, frameon=False)
-fig.subplots_adjust(wspace=0.08)
-for ext in ("png", "pdf"):
-    fig.savefig(f"figures/main_curves.{ext}", dpi=200, bbox_inches="tight")
-plt.close(fig)
+def curves_figure(nrows, ncols, figsize, name):
+    fig, axes = plt.subplots(nrows, ncols, figsize=figsize, sharey=True, sharex=True)
+    for ax, (a, al) in zip(np.ravel(axes), ALGOS):
+        ns = []
+        for c, cl, col in CONDS:
+            b = band(a, c)
+            if b is None:
+                continue
+            tt, m, lo, hi, n = b
+            ns.append(f"{cl}: {n}")
+            if lo is not None:
+                ax.fill_between(tt / 1000, lo, hi, color=col, alpha=0.18, linewidth=0)
+            ax.plot(tt / 1000, m, color=col, linewidth=1.6, label=cl)
+        if "0" in random_ref:
+            ax.axhline(random_ref["0"], color=MUTED, linestyle=(0, (3, 3)), linewidth=1)
+            ax.text(495, random_ref["0"] + 10, "random policy", color=MUTED, fontsize=7, ha="right")
+        counts = sorted({x.split(": ")[1] for x in ns})
+        ax.set_title(f"{al} ({'/'.join(counts)} seeds per condition)", fontsize=8)
+        ax.set_ylabel("Evaluation return")
+        ax.grid(axis="y", color=GRID, linewidth=0.6)
+        for side in ("top", "right"):
+            ax.spines[side].set_visible(False)
+    np.ravel(axes)[-1].set_xlabel("Training steps (thousands)")
+    if ncols > 1:
+        np.ravel(axes)[0].set_xlabel("Training steps (thousands)")
+        np.ravel(axes)[1].set_ylabel("")
+    h, l = np.ravel(axes)[0].get_legend_handles_labels()
+    fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 1.07 if ncols > 1 else 1.04),
+               ncol=4 if ncols > 1 else 2, frameon=False)
+    fig.subplots_adjust(wspace=0.08, hspace=0.3)
+    for ext in ("png", "pdf"):
+        fig.savefig(f"figures/{name}.{ext}", dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+
+curves_figure(1, 2, (7.0, 2.4), "main_curves")            # two-column width
+curves_figure(2, 1, (3.4, 4.2), "main_curves_column")     # one-column width, for the paper
 
 
 # ---------------------------------------------------------------- Figure: paired differences
