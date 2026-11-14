@@ -145,3 +145,63 @@ settings (`configs/main/`), so the tuning budget is equal (zero) for both.
 reruns of failed runs (rule 3). If the quota does not allow all runs before the end of December,
 the Sudden condition is reduced to seeds 11-13 for both algorithms, and this is reported.
 
+**Amendment 3 (DRAFT: date on commit; committed before any run it describes).**
+
+*Results that prompted it.* With seeds 11-15: H4 (Fixed - Sudden, 255k-350k) is inconclusive
+(+31.7, 95% CI [-7.6, 65.0], MDE 76; `tables/hypotheses.md`). SAC with the authors' settings did not
+learn Hand Reach within 500k steps (final return 94-126, no solved episodes, seeds 11-12), so H2 and H5
+cannot separate the role of batch normalisation from a failure to learn.
+
+*New comparison: CrossQ without batch normalisation (`crossqnobn`).* CrossQ's settings with Batch
+Renormalization removed and SAC's target network restored (`-crossq_style 0 -bn 0`; tau = 0.005, no
+joint forward pass; critic width 2048, policy delay 3, Adam beta1 0.5, learning rate 0.001 unchanged;
+`configs/main/handreach_crossqnobn_*.cfg`). It differs from CrossQ only in its stabiliser (batch
+statistics vs a target network). Command-line options only; no code change (checked with a short
+CPU run on 14 Nov).
+
+*Pilot and pass rule (fixed before the pilot runs).* One run without fatigue, seed 1
+(`configs/pilot/handreach_crossqnobn_nofatigue.cfg`). The variant proceeds to the main runs only if
+its mean solved fraction over the 20 evaluations after 400k steps is at least 0.20. If it fails, it is
+reported like the LayerNorm pilot (no evidence either way) and no further variant is tried.
+
+*Main runs if the pilot passes.* Fixed, Drift and Sudden, seeds 11-15, 500k steps, same evaluation
+protocol. These are mechanism runs, so under decision rule 2 they start only after the rule-2 CrossQ
+seeds (16-18) are complete. Rule 2 does not extend to this variant.
+
+**H6.** The Drift penalty (Fixed - Drift, final 100k steps) is larger for CrossQ than for the
+variant without batch normalisation (per-seed difference-in-differences, seeds 11-15, same bootstrap
+rule as H1).
+
+**H7.** The Sudden penalty (Fixed - Sudden, 255k-350k) is larger for CrossQ than for the variant
+(same rule). H6 and H7 replace H2 and H5 as the tests of whether CrossQ's robustness depends on batch
+normalisation. Each variant's own penalties and the MDE are reported alongside.
+
+*SAC scope.* SAC seeds 13-15 (Fixed, Drift, No fatigue) are completed, as pre-registered. Decision
+rule 2 is no longer applied to SAC (seeds 16-18), and SAC Sudden (H5) is not run: because SAC did not
+learn the task, more SAC runs cannot make H2 or H5 interpretable. This decision rests on SAC's failure
+to learn, not on the outcome of any hypothesis test. H2 and H5 are reported as not testable.
+
+*Sudden stays at seeds 11-15.* As fixed in Amendment 2, rule 2 does not extend to Sudden. No seeds
+are added after seeing H4.
+
+*Order of batches.* Batch 4 (Sudden, bridge) ran before the SAC seeds so that the sudden-weakening
+test was not delayed; this changed the order only. Planned: Batch 5 = CrossQ Fixed + Drift seeds
+16-18 and the variant pilot; Batch 6 = CrossQ No fatigue seeds 16-18 and SAC seeds 13-15; Batches 7-8
+= variant main runs (only if the pilot passes).
+
+*Run-to-run variation (observation, no change to the analysis).* GPU computation is not bit-for-bit
+deterministic. Same-seed runs are identical up to the first evaluation after learning starts (5,000
+steps) and differ from 10,000 steps onwards: Sudden and No fatigue, identical conditions until 250k,
+differed by 62 points on average over 200k-250k (SD 83 across seeds, larger than the between-seed SD
+of 42). Seed pairing therefore reduces variance little. The paired analysis is kept as registered.
+
+*LayerNorm pilot (correction of interpretation).* `-crossq_style 1` sets tau = 1 in `train.py`, so
+the LayerNorm pilot ran without a target network as well as without batch normalisation. Its failure
+most likely reflects the missing stabiliser and gives no evidence about LayerNorm itself.
+
+*Exploratory analyses (not hypothesis tests).* The extra drop of Sudden below Fixed after the jump,
+relative to the gap before it, and the comparison of each condition before and after the jump
+(`tables/sudden_crossq.md`) are reported as exploratory.
+
+*Compute.* Remaining: about 18 Kaggle hours of required runs (Batches 5-6), plus about 2.5 hours for
+the pilot and about 17.5 for the variant's main runs if it passes. A margin of 25% is kept for reruns.
