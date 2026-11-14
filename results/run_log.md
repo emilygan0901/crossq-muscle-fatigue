@@ -43,3 +43,10 @@
 | bridge_walker2d_crossq_seed1_20261114T064621Z | configs/bridge/walker2d_crossq.cfg | 1 | 0 | 113 | |
 | main_handreach_crossq_sudden_seed15_20261114T064027Z | configs/main/handreach_crossq_sudden.cfg | 15 | 0 | 139 | |
 | bridge_walker2d_sac_seed1_20261114T083902Z | configs/bridge/walker2d_sac.cfg | 1 | 0 | 49 | |
+| pilot_handreach_crossqnobn_nofatigue_seed1_20261114T114602Z | configs/pilot/handreach_crossqnobn_nofatigue.cfg | 1 | 0 | 115 | |
+| main_handreach_crossq_fixed_seed16_20261114T114604Z | configs/main/handreach_crossq_fixed.cfg | 16 | 0 | 137 | |
+| main_handreach_crossq_drift_seed16_20261114T134032Z | configs/main/handreach_crossq_drift.cfg | 16 | 0 | 135 | |
+| main_handreach_crossq_fixed_seed17_20261114T140244Z | configs/main/handreach_crossq_fixed.cfg | 17 | 0 | 140 | |
+| main_handreach_crossq_drift_seed17_20261114T155523Z | configs/main/handreach_crossq_drift.cfg | 17 | 0 | 134 | |
+| main_handreach_crossq_fixed_seed18_20261114T162214Z | configs/main/handreach_crossq_fixed.cfg | 18 | 0 | 139 | |
+| main_handreach_crossq_drift_seed18_20261114T180932Z | configs/main/handreach_crossq_drift.cfg | 18 | 0 | 127 | |

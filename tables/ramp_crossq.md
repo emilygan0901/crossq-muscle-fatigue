@@ -5,8 +5,11 @@
 | 13 | 266 (at 170k) | 123 (at 290k) | 203 (at 120k) | -142 |
 | 14 | 192 (at 35k) | 288 (at 270k) | 215 (at 35k) | +96 |
 | 15 | 192 (at 355k) | 333 (at 185k) | 249 (at 325k) | +141 |
+| 16 | 204 (at 235k) | 205 (at 380k) | - | +1 |
+| 17 | 187 (at 355k) | 98 (at 55k) | - | -88 |
+| 18 | 170 (at 400k) | 321 (at 165k) | - | +151 |
 
-Mean Drift minus Fixed: -8.5, 95% bootstrap CI [-115.7, 98.8] (5 seeds). Positive = Drift dips more.
+Mean Drift minus Fixed: +2.7, 95% bootstrap CI [-76.7, 80.6] (8 seeds). Positive = Drift dips more.
 
 Mean return per 100k window, seeds with all three conditions:
 | Window | Fixed 0.5 | Drift 0 to 0.5 | No fatigue | Drift level (mid-window) |

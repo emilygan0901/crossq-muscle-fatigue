@@ -2,8 +2,8 @@
 |---|---|---|---|---|---|---|
 | bridge_walker2d_crossq | 1 | 1 | 113-113 | 1.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | bridge_walker2d_sac | 1 | 1 | 49-49 | 0.8 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
-| main_handreach_crossq_drift | 5 | 5 | 137-139 | 11.5 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
-| main_handreach_crossq_fixed | 5 | 5 | 138-143 | 11.7 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
+| main_handreach_crossq_drift | 8 | 8 | 127-139 | 18.1 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
+| main_handreach_crossq_fixed | 8 | 8 | 137-143 | 18.6 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_crossq_nofatigue | 5 | 5 | 131-137 | 11.2 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_crossq_sudden | 5 | 5 | 139-160 | 12.5 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_sac_drift | 2 | 2 | 84-87 | 2.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
@@ -12,12 +12,13 @@
 | pilot_handreach_crossq_drift | 1 | 1 | 171-171 | 2.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | pilot_handreach_crossq_nofatigue | 1 | 1 | 171-171 | 2.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | pilot_handreach_crossqln_nofatigue | 1 | 1 | 141-141 | 2.4 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
+| pilot_handreach_crossqnobn_nofatigue | 1 | 1 | 115-115 | 1.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | pilot_handreach_sac_drift | 1 | 1 | 90-90 | 1.5 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | pilot_handreach_sac_nofatigue | 1 | 1 | 90-90 | 1.5 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | repro_walker2d_crossq | 5 | 5 | 110-165 | 12.8 | Tesla T4 | jax 0.4.19, mujoco 2.3.7, gymnasium 0.29.1 |
 | repro_walker2d_sac | 5 | 5 | 48-49 | 4.1 | Tesla T4 | jax 0.4.19, mujoco 2.3.7, gymnasium 0.29.1 |
 
-Total: 86.2 GPU-hours over 43 runs (one run per GPU; Kaggle sessions with 2 GPUs run two at a time). Python 3.11.5. Hyperparameters: see `configs/` (TRAIN_ARGS); summary below.
+Total: 101.7 GPU-hours over 50 runs (one run per GPU; Kaggle sessions with 2 GPUs run two at a time). Python 3.11.5. Hyperparameters: see `configs/` (TRAIN_ARGS); summary below.
 
 | Setting | CrossQ | SAC |
 |---|---|---|
