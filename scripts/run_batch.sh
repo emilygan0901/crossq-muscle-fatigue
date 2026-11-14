@@ -7,7 +7,15 @@
 set -uo pipefail
 KIT_DIR=$(cd "$(dirname "$0")/.." && pwd)
 
-NGPU=$(nvidia-smi -L 2>/dev/null | wc -l); [ "$NGPU" -ge 1 ] || NGPU=1
+NGPU=$(nvidia-smi -L 2>/dev/null | wc -l)
+if [ "$NGPU" -lt 1 ]; then
+  # Without a GPU every run crashes at JAX start-up ("No visible GPU devices"); stop before starting any.
+  if [ "${ALLOW_CPU:-0}" != "1" ]; then
+    echo "ERROR: no GPU found. In Kaggle, set Settings > Accelerator to 'GPU T4 x2' (and check the weekly GPU quota), then run again." >&2
+    exit 1
+  fi
+  NGPU=1
+fi
 SLOTS=$(( NGPU * ${PER_GPU:-1} ))
 echo "GPUs: $NGPU, parallel runs: $SLOTS, jobs: $#"
 
