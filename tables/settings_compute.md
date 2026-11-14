@@ -1,8 +1,11 @@
 | Run group | Runs | Exit 0 | Minutes per run (min-max) | GPU-hours | GPU | Key packages |
 |---|---|---|---|---|---|---|
+| bridge_walker2d_crossq | 1 | 1 | 113-113 | 1.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
+| bridge_walker2d_sac | 1 | 1 | 49-49 | 0.8 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_crossq_drift | 5 | 5 | 137-139 | 11.5 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_crossq_fixed | 5 | 5 | 138-143 | 11.7 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_crossq_nofatigue | 5 | 5 | 131-137 | 11.2 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
+| main_handreach_crossq_sudden | 5 | 5 | 139-160 | 12.5 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_sac_drift | 2 | 2 | 84-87 | 2.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_sac_fixed | 2 | 2 | 79-93 | 2.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
 | main_handreach_sac_nofatigue | 2 | 2 | 82-94 | 2.9 | Tesla T4 | jax 0.4.19, mujoco 3.1.2, gymnasium 0.29.1, myosuite 2.8.4 |
@@ -14,7 +17,7 @@
 | repro_walker2d_crossq | 5 | 5 | 110-165 | 12.8 | Tesla T4 | jax 0.4.19, mujoco 2.3.7, gymnasium 0.29.1 |
 | repro_walker2d_sac | 5 | 5 | 48-49 | 4.1 | Tesla T4 | jax 0.4.19, mujoco 2.3.7, gymnasium 0.29.1 |
 
-Total: 71.0 GPU-hours over 36 runs (one run per GPU; Kaggle sessions with 2 GPUs run two at a time). Python 3.11.5. Hyperparameters: see `configs/` (TRAIN_ARGS); summary below.
+Total: 86.2 GPU-hours over 43 runs (one run per GPU; Kaggle sessions with 2 GPUs run two at a time). Python 3.11.5. Hyperparameters: see `configs/` (TRAIN_ARGS); summary below.
 
 | Setting | CrossQ | SAC |
 |---|---|---|

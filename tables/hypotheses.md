@@ -2,6 +2,7 @@
 |---|---|---|---|---|---|---|
 | Check | CrossQ | Cost of fatigue (No fatigue - Fixed) | 5 | 81.9 [-1.2, 166.9] | 170 | check (not a hypothesis) |
 | H1 | CrossQ | Drift penalty (Fixed - Drift) | 5 | -5.9 [-62.1, 51.8] | 115 | inconclusive |
+| H4 | CrossQ | Sudden penalty (Fixed - Sudden, 255k-350k) | 5 | 31.7 [-7.6, 65.0] | 76 | inconclusive |
 | Check | SAC | Cost of fatigue (No fatigue - Fixed) | 2 | -17.1 | - | check (not a hypothesis) |
 | H2 part | SAC | Drift penalty (Fixed - Drift) | 2 | -14.7 | - | too few seeds |
 | H2 | both | Drift penalty, CrossQ minus SAC | 2 | -44.2 | - | too few seeds |

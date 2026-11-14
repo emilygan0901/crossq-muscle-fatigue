@@ -21,7 +21,8 @@ scripts/random_baseline.sh  random-policy reference for a config's task
 scripts/analyze_repro.py    reproduction figure and table from the raw results
 scripts/analyze_h1.py       primary test H1 (Fixed vs Drift, final 100k steps)
 scripts/analyze_ramp.py     secondary metric: largest drop in return during the ramp
-scripts/analyze_main.py     main figures and tables (curves, paired differences, results, hypotheses, compute)
+scripts/analyze_main.py     main figures and tables (curves, paired differences, results, hypotheses, compute, Sudden windows)
+scripts/analyze_bridge.py   Walker2d bridge runs against the reproduction
 results/raw/<run_id>/   one folder per run (created automatically)
 results/run_log.md      one line per run (created automatically)
 notes/run_notes.md      what was run, why, and what happened (written by hand)

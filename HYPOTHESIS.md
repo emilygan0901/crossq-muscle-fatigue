@@ -75,8 +75,9 @@ updates at the default momentum, far shorter than the 400k-step drift.
 | 1 | CrossQ Fixed + Drift, seeds 11-13 (6 runs) | done 8 Nov (all exit 0, ~140 min each; rule 1 passed) |
 | 2 | CrossQ Fixed + Drift seeds 14-15; CrossQ no fatigue seeds 11-12 (6 runs); plus pilot `configs/pilot/handreach_crossqln_nofatigue.cfg` (CrossQ with LayerNorm, seed 1) to decide H3 | done 8 Nov (all exit 0, 131-141 min each). H1 after seeds 11-15: inconclusive (`tables/h1_crossq.md`), so decision rule 2 applies |
 | 3 | CrossQ no fatigue seeds 13-15; SAC Fixed + Drift + No fatigue seeds 11-12 (9 runs) | done 9 Nov (all exit 0; CrossQ 135-137 min, SAC 79-94 min) |
-| 4 | SAC Fixed + Drift + No fatigue seeds 13-15; Walker2d bridge (MuJoCo 3.1.2 + patch), 1 seed per algorithm (11 runs) | planned |
-| 5 onwards | Rule 2: seeds 16-18 for all six main conditions (18 runs); Sudden, CrossQ and SAC seeds 11-15 (10 runs) | planned (Amendment 2) |
+| 4 | CrossQ Sudden seeds 11-15; Walker2d bridge (MuJoCo 3.1.2 + patch), CrossQ and SAC seed 1 (7 runs) | done 14 Nov (all exit 0). A first attempt the same night started without a GPU; all 7 runs crashed at start-up and were rerun unchanged (rule 3). Run before the SAC seeds so that the sudden-weakening test is not delayed while the SAC decision is pending; order only, no change to conditions or analysis |
+| 5 | SAC Fixed + Drift + No fatigue seeds 13-15 (9 runs) | planned |
+| 6 onwards | Rule 2: seeds 16-18 for the main conditions; SAC Sudden seeds 11-15 if retained | planned (Amendment 2; SAC scope pending) |
 
 Each batch is sized to finish within Kaggle's 12-hour session limit on 2x T4 (CrossQ about 171 min
 and SAC about 90 min per Hand Reach run, measured in the pilot).
