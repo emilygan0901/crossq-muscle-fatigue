@@ -379,13 +379,14 @@ print("saved figures/schedules.*, main_curves.*, main_differences.*, tables/main
 SW = [(200_000, 250_000, "200-250k (before)"), (250_000, 255_000, "255k (first after)"),
       (255_000, 300_000, "255-300k"), (300_000, 350_000, "300-350k"), FINAL + ("400-500k",)]
 sd = ["| Condition | Seeds | " + " | ".join(l for _, _, l in SW) + " |", "|---" * (len(SW) + 2) + "|"]
+SUDDEN_SEEDS = set(seeds(runs, "crossq", "sudden"))
 for c in ("sudden", "fixed", "nofatigue"):
-    ss = seeds(runs, "crossq", c)
+    ss = sorted(set(seeds(runs, "crossq", c)) & SUDDEN_SEEDS)   # same seeds in every row
     if not ss:
         continue
     vals = [np.mean([window(runs[("crossq", c, s)], (a, b)) for s in ss]) for a, b, _ in SW]
     sd.append(f"| {LABEL[c]} | {len(ss)} | " + " | ".join(f"{v:.0f}" for v in vals) + " |")
-sd.append("\nCrossQ mean evaluation return per window (mean over seeds). Sudden and No fatigue are identical "
+sd.append("\nCrossQ mean evaluation return per window (mean over the seeds that have a Sudden run). Sudden and No fatigue are identical "
           "conditions until 250k, so their difference before the jump shows run-to-run variation alone "
           "(GPU computation is not bit-for-bit deterministic, so same-seed runs diverge once training starts).")
 if seeds(runs, "crossq", "sudden"):
