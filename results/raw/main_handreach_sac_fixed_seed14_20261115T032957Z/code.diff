@@ -1,0 +1,22 @@
+diff --git a/train.py b/train.py
+index 789a9ab..ad90b17 100644
+--- a/train.py
++++ b/train.py
+@@ -22,6 +22,7 @@ from sbx.sac.actor_critic_evaluation_callback import CriticBiasCallback, EvalCal
+ from sbx.sac.utils import *
+ 
+ import gymnasium as gym
++import fatigue_drift  # coursework: registers MyoSuite + fatigue-drift envs (kit/src/fatigue_drift.py)
+ from shimmy.registration import DM_CONTROL_SUITE_ENVS
+ 
+ 
+@@ -217,7 +218,8 @@ with wandb.init(
+         jax_random_key_for_seeds=args.seed,
+         best_model_save_path=None,
+         log_path=eval_log_dir, eval_freq=eval_freq,
+-        n_eval_episodes=1, deterministic=True, render=False
++        # coursework: number of evaluation episodes from N_EVAL_EPISODES (default 1, as in the original)
++        n_eval_episodes=int(os.environ.get("N_EVAL_EPISODES", "1")), deterministic=True, render=False
+     )
+ 
+     # Callback that evaluates q bias according to the REDQ paper.

@@ -75,6 +75,17 @@ def iqm(x):
     return x[k:len(x) - k].mean() if len(x) >= 4 else x.mean()
 
 
+def t_ci(x):
+    x = np.asarray(x, float)
+    if len(x) < 3:
+        return np.nan, np.nan
+    h = stats.t.ppf(0.975, len(x) - 1) * np.std(x, ddof=1) / np.sqrt(len(x))
+    return x.mean() - h, x.mean() + h
+
+
+NOT_TESTABLE = "not testable: SAC did not learn the task (Amendment 3)"
+
+
 def mde(d):
     n = len(d)
     if n < 3:
@@ -151,8 +162,8 @@ CONTRASTS = [  # (id, label, algo, a, b, window)
     ("H2 part", "Drift penalty (Fixed - Drift)", "sac", "fixed", "drift", FINAL),
     ("H5 part", "Sudden penalty (Fixed - Sudden, 255k-350k)", "sac", "fixed", "sudden", SUDDEN),
 ]
-hyp = ["| Test | Algorithm | Comparison | Seeds | Mean difference [95% CI] | MDE | Verdict |",
-       "|---|---|---|---|---|---|---|"]
+hyp = ["| Test | Algorithm | Comparison | Seeds | Mean difference [95% bootstrap CI] | 95% t-interval | MDE | Verdict |",
+       "|---|---|---|---|---|---|---|---|"]
 diffs = {}
 for hid, lab, algo, ca, cb, win in CONTRASTS:
     ss, d = paired(algo, ca, cb, win)
@@ -161,8 +172,10 @@ for hid, lab, algo, ca, cb, win in CONTRASTS:
     ci = boot_ci(d)
     diffs[(algo, lab)] = (ss, d, ci, mde(d))
     md_ = f"{mde(d):.0f}" if len(d) >= 3 else "-"
-    v = "check (not a hypothesis)" if hid == "Check" else verdict(ci, len(d))
-    hyp.append(f"| {hid} | {dict(ALGOS)[algo]} | {lab} | {len(d)} | {fmt(d.mean(), ci, 1)} | {md_} | {v} |")
+    v = "check (not a hypothesis)" if hid == "Check" else (NOT_TESTABLE if algo == "sac" else verdict(ci, len(d)))
+    tc = t_ci(d)
+    tci = "-" if np.isnan(tc[0]) else f"[{tc[0]:.1f}, {tc[1]:.1f}]"
+    hyp.append(f"| {hid} | {dict(ALGOS)[algo]} | {lab} | {len(d)} | {fmt(d.mean(), ci, 1)} | {tci} | {md_} | {v} |")
 for hid, lab, ca, cb, win in [("H2", "Drift penalty, CrossQ minus SAC", "fixed", "drift", FINAL),
                               ("H5", "Sudden penalty, CrossQ minus SAC", "fixed", "sudden", SUDDEN)]:
     s1, d1 = paired("crossq", ca, cb, win)
@@ -173,7 +186,11 @@ for hid, lab, ca, cb, win in [("H2", "Drift penalty, CrossQ minus SAC", "fixed",
     did = np.array([d1[s1.index(s)] - d2[s2.index(s)] for s in common])
     ci = boot_ci(did)
     md_ = f"{mde(did):.0f}" if len(did) >= 3 else "-"
-    hyp.append(f"| {hid} | both | {lab} | {len(did)} | {fmt(did.mean(), ci, 1)} | {md_} | {verdict(ci, len(did))} |")
+    tc = t_ci(did)
+    tci = "-" if np.isnan(tc[0]) else f"[{tc[0]:.1f}, {tc[1]:.1f}]"
+    hyp.append(f"| {hid} | both | {lab} | {len(did)} | {fmt(did.mean(), ci, 1)} | {tci} | {md_} | {NOT_TESTABLE} |")
+hyp.append("\nH3, H6 and H7 (role of batch normalisation) were not testable: neither variant without batch "
+           "normalisation learned the task (LayerNorm pilot; no-BN pilot, Amendment 3).")
 hyp.append("\nPositive = the second condition scores lower (a penalty). Verdict rule (pre-registered): "
            "supported if the 95% CI is entirely above 0, contradicted if entirely below 0. MDE = minimum "
            "detectable effect (80% power, paired t-test, alpha 0.05).")

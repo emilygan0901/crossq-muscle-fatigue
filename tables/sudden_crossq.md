@@ -2,6 +2,6 @@
 |---|---|---|---|---|---|---|
 | Sudden at 250k | 5 | 378 | 371 | 402 | 391 | 475 |
 | Fixed 0.5 | 8 | 369 | 347 | 398 | 405 | 447 |
-| No fatigue | 5 | 440 | 524 | 481 | 510 | 572 |
+| No fatigue | 8 | 419 | 439 | 474 | 502 | 566 |
 
 CrossQ mean evaluation return per window (mean over seeds). Sudden and No fatigue are identical conditions until 250k, so their difference before the jump shows run-to-run variation alone (GPU computation is not bit-for-bit deterministic, so same-seed runs diverge once training starts).
