@@ -123,15 +123,20 @@ def main():
         ax.fill_between(x, np.percentile(smooth, 15, axis=0), np.percentile(smooth, 85, axis=0),
                         color=color, alpha=0.18, linewidth=0)
         ax.plot(x, iqm(smooth, axis=0), color=color, linewidth=2, label=f"{label} ({len(seeds)} seeds)")
-        ax.annotate(label, (x[-1], iqm(smooth, axis=0)[-1]), xytext=(4, 0), textcoords="offset points",
+        ax.annotate(label, (x[-1], iqm(smooth, axis=0)[-1]), xytext=(9, 0), textcoords="offset points",
                     va="center", color="#0b0b0b", fontsize=8)
     ax.axhline(rnd_mean, color="#52514e", linestyle="--", linewidth=1, label="Random policy")
+    # approximate values read from the paper's Fig. 5 at 0.5M steps (hollow diamonds)
+    for (a, label, color), v in zip(ALGOS, (6300, 4000) if ALGOS[0][0] == "crossq" else (4000, 6300)):
+        ax.plot([0.5], [v], marker="D", markersize=5, markerfacecolor="white", markeredgecolor=color,
+                markeredgewidth=1.3, linestyle="none", clip_on=False, zorder=5,
+                label="Paper, Fig. 5 (approx.)" if a == ALGOS[0][0] else None)
     ax.set_xlabel("Environment steps (millions)")
     ax.set_ylabel("Return (IQM over seeds)")
     ax.set_xlim(0, 0.5)
     ax.grid(axis="y", color="#e4e3df", linewidth=0.6)
     ax.spines[["top", "right"]].set_visible(False)
-    ax.legend(frameon=False, loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, fontsize=7, handlelength=1.6, columnspacing=1.0)
+    ax.legend(frameon=False, loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2, fontsize=7, handlelength=1.6, columnspacing=1.0)
     fig.tight_layout()
     for ext in ("pdf", "png"):
         fig.savefig(os.path.join(FIG_DIR, f"repro_walker2d.{ext}"), dpi=300, bbox_inches="tight")
