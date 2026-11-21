@@ -1,0 +1,29 @@
+digraph b { 
+  graph [fontname="Liberation Sans", fontsize=7, bgcolor="transparent", pad=0.02, margin=0];
+  node  [fontname="Liberation Sans", fontsize=7, shape=box, style="rounded,filled", penwidth=0.6,
+         margin="0.07,0.035", fontcolor="#222222"];
+  edge  [fontname="Liberation Sans", fontsize=6.5, penwidth=0.6, arrowsize=0.45, color="#6f6e69",
+         fontcolor="#222222"];
+
+  rankdir=TB; nodesep=0.12; ranksep=0.16;
+  ain  [shape=plaintext, style="", label=<<I>a</I><SUB>t</SUB>>, height=0.15];
+  rout [shape=plaintext, style="", label=<<I>r</I><SUB>t+1</SUB>>, height=0.15];
+  sout [shape=plaintext, style="", label=<<I>s</I><SUB>t+1</SUB>>, height=0.15];
+  subgraph cluster_env {
+    label=<<B><FONT COLOR="#2a6fbf">Environment</FONT></B>>; labeljust=l;
+    style="rounded"; color="#2a6fbf"; penwidth=0.7; margin=7;
+    fat [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#e0602a">Fatigue schedule</FONT></B></TD></TR><TR><TD><I>ℓ</I>(<I>t</I>),  <I>t</I> = training step</TD></TR><TR><TD><FONT POINT-SIZE="6" COLOR="#6f6e69">this work</FONT></TD></TR></TABLE>>,
+         color="#e0602a", fillcolor="#fdeee5", penwidth=0.9];
+    dyn [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#2a6fbf">Muscle dynamics</FONT></B></TD></TR><TR><TD>MuJoCo, 39-muscle hand</TD></TR><TR><TD>MA + MR + MF = 1,  activation ≤ 1 − MF</TD></TR></TABLE>>,
+         color="#2a6fbf", fillcolor="white"];
+    rew [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#2a6fbf">Reward</FONT></B></TD></TR><TR><TD>−<I>d</I><SUB>t</SUB> + bonus − penalty</TD></TR></TABLE>>,
+         color="#2a6fbf", fillcolor="white"];
+    st  [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#2a6fbf">State</FONT></B></TD></TR><TR><TD>joints, fingertips,</TD></TR><TR><TD>errors, activations</TD></TR></TABLE>>,
+         color="#2a6fbf", fillcolor="white"];
+  }
+  fat -> dyn [label=<<FONT COLOR="#e0602a"> MF = <I>ℓ</I>(<I>t</I>)<BR/> at reset</FONT>>,
+              color="#e0602a", penwidth=0.9];
+  ain -> dyn;
+  dyn -> rew; dyn -> st;
+  rew -> rout; st -> sout;
+}

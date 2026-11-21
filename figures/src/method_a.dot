@@ -1,0 +1,20 @@
+digraph a { 
+  graph [fontname="Liberation Sans", fontsize=7, bgcolor="transparent", pad=0.02, margin=0];
+  node  [fontname="Liberation Sans", fontsize=7, shape=box, style="rounded,filled", penwidth=0.6,
+         margin="0.07,0.035", fontcolor="#222222"];
+  edge  [fontname="Liberation Sans", fontsize=6.5, penwidth=0.6, arrowsize=0.45, color="#6f6e69",
+         fontcolor="#222222"];
+
+  rankdir=TB; nodesep=0.55; ranksep=0.3; newrank=true;
+  agent  [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#178f65">Agent (CrossQ)</FONT></B></TD></TR><TR><TD>actor <I>π</I>(<I>a</I>|<I>s</I>)</TD></TR><TR><TD>critic <I>Q</I>(<I>s</I>,<I>a</I>)</TD></TR><TR><TD><FONT POINT-SIZE="6" COLOR="#6f6e69">batch renorm.<BR/>no target network</FONT></TD></TR></TABLE>>,
+          color="#178f65", fillcolor="#eaf6f0"];
+  env    [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#2a6fbf">Environment</FONT></B></TD></TR><TR><TD>Hand Reach</TD></TR><TR><TD><FONT POINT-SIZE="6" COLOR="#6f6e69">see b</FONT></TD></TR></TABLE>>,
+          color="#2a6fbf", fillcolor="#eaf1fa"];
+  buffer [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#6f6e69">Replay buffer</FONT></B></TD></TR><TR><TD>1M transitions</TD></TR><TR><TD><FONT POINT-SIZE="6" COLOR="#6f6e69">holds the whole run</FONT></TD></TR></TABLE>>,
+          color="#6f6e69", fillcolor="#f2f1ee"];
+  { rank=same; agent; env; }
+  agent -> env [label=<<I>a</I><SUB>t</SUB>: 39 muscle<BR/>activations>];
+  env -> agent [label=<<I>s</I><SUB>t</SUB>>];
+  env -> buffer [label=< transition<BR/> (<I>s</I><SUB>t</SUB>, <I>a</I><SUB>t</SUB>, <I>r</I><SUB>t+1</SUB>, <I>s</I><SUB>t+1</SUB> )>];
+  buffer -> agent [label=<uniform  <BR/>batch of 256  >];
+}
