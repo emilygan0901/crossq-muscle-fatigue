@@ -117,8 +117,8 @@ def panel_c(svg):
     sudden = np.where(t >= 250, 0.5, 0.0)
     run_mean = lambda y: np.cumsum(y) / np.arange(1, len(y) + 1)  # noqa: E731  (uniform grid)
     fig, axes = plt.subplots(1, 2, figsize=(3.35, 1.3), sharey=True)
-    for ax, y, name, col in ((axes[0], drift, "Drift", OURS), (axes[1], sudden, "Sudden", "#8a4fbf")):
-        ax.plot(t, np.full_like(t, 0.5), color="#b9b8b3", lw=0.7, zorder=1)
+    for ax, y, name, col in ((axes[0], drift, "Drift", "#eb6834"), (axes[1], sudden, "Sudden", "#eda100")):
+        ax.plot(t, np.full_like(t, 0.5), color="#2a78d6", lw=0.7, alpha=0.7, zorder=1)
         ax.plot(t, y, color=col, lw=1.1, zorder=3)
         ax.plot(t, run_mean(y), color=col, lw=1.1, ls=(0, (2.2, 1.4)), zorder=3)
         ax.set_title(name, fontsize=6.5, weight="bold", pad=2, loc="left", color=INK)
@@ -127,7 +127,7 @@ def panel_c(svg):
         ax.set_yticks([0, 0.25, 0.5])
         ax.set_xlabel("training step", labelpad=1.5)
     axes[0].set_ylabel(r"fatigued fraction MF", labelpad=2)
-    axes[0].text(500, 0.52, "Fixed (both lines)", ha="right", va="bottom", fontsize=5.8, color="#9a9994")
+    axes[0].text(500, 0.52, "Fixed (both lines)", ha="right", va="bottom", fontsize=5.8, color="#2a78d6")
     # direct labels on the Drift panel only (same meaning on both)
     axes[0].annotate(r"body, $\ell(t)$", xy=(280, 0.35), xytext=(140, 0.42), fontsize=5.8,
                      color=INK, ha="center", arrowprops=dict(arrowstyle="-", lw=0.4, color=INK))

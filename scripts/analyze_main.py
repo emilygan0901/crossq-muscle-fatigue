@@ -37,7 +37,7 @@ LABEL = {c: l for c, l, _ in CONDS}
 COLOR = {c: k for c, _, k in CONDS}
 FINAL, SUDDEN = (400_000, 500_000), (250_000, 350_000)
 INK, MUTED, GRID = "#2b2a28", "#6b6a66", "#e4e3df"
-plt.rcParams.update({"font.size": 8, "axes.edgecolor": MUTED, "xtick.color": MUTED, "ytick.color": MUTED,
+plt.rcParams.update({"font.family": "Liberation Sans", "font.size": 8, "axes.edgecolor": MUTED, "xtick.color": MUTED, "ytick.color": MUTED,
                      "axes.labelcolor": INK, "text.color": INK, "pdf.fonttype": 42})
 os.makedirs("figures", exist_ok=True)
 os.makedirs("tables", exist_ok=True)
@@ -318,8 +318,14 @@ def curves_figure(nrows, ncols, figsize, name):
         if "0" in random_ref:
             ax.axhline(random_ref["0"], color=MUTED, linestyle=(0, (3, 3)), linewidth=1)
             ax.text(495, random_ref["0"] + 10, "random policy", color=MUTED, fontsize=7, ha="right")
-        counts = sorted({x.split(": ")[1] for x in ns})
-        ax.set_title(f"{al} ({'/'.join(counts)} seeds per condition)", fontsize=8)
+        ax.axvspan(400, 500, color=GRID, alpha=0.6, linewidth=0, zorder=0)
+        marks = ((250, "sudden\ndrop"), (400, "drift\nends")) if a == "crossq" else ((400, "drift\nends"),)
+        for xv, lab in marks:
+            ax.axvline(xv, color=MUTED, linestyle=(0, (2, 2)), linewidth=0.8, zorder=1)
+            ax.text(xv, 1.01, lab, transform=ax.get_xaxis_transform(), ha="center", va="bottom",
+                    fontsize=6.2, color=MUTED, linespacing=0.95)
+        title = "CrossQ: 8 seeds per condition (Sudden 5)" if a == "crossq" else "SAC: 5 seeds per condition (Sudden not run)"
+        ax.set_title(title, fontsize=8, pad=16)
         ax.set_ylabel("Evaluation return")
         ax.grid(axis="y", color=GRID, linewidth=0.6)
         for side in ("top", "right"):
@@ -329,9 +335,9 @@ def curves_figure(nrows, ncols, figsize, name):
         np.ravel(axes)[0].set_xlabel("Training steps (thousands)")
         np.ravel(axes)[1].set_ylabel("")
     h, l = np.ravel(axes)[0].get_legend_handles_labels()
-    fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 1.07 if ncols > 1 else 1.04),
+    fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 1.09 if ncols > 1 else 1.075),
                ncol=4 if ncols > 1 else 2, frameon=False)
-    fig.subplots_adjust(wspace=0.08, hspace=0.3)
+    fig.subplots_adjust(wspace=0.08, hspace=0.42)
     for ext in ("png", "pdf"):
         fig.savefig(f"figures/{name}.{ext}", dpi=200, bbox_inches="tight")
     plt.close(fig)
@@ -350,11 +356,17 @@ for i, ((algo, lab), (ss, d, ci, md_)) in enumerate(items):
     ylabels.append((y, f"{dict(ALGOS)[algo]}: {lab.split(' (')[0]}\n(n = {len(d)})"))
     if not np.isnan(md_):
         ax.plot([-md_, md_], [y, y], color=GRID, linewidth=7, solid_capstyle="butt", zorder=0)
+    fade = 0.4 if algo == "sac" else 1.0          # SAC tests were not testable (SAC did not learn)
     jitter = np.linspace(-0.12, 0.12, len(d))
-    ax.scatter(d, y + jitter, s=12, color=MUTED, zorder=2, linewidths=0)
+    ax.scatter(d, y + jitter, s=12, color=MUTED, zorder=2, linewidths=0, alpha=fade)
+    tc = t_ci(d)
+    if not np.isnan(tc[0]):
+        ax.plot(tc, [y - 0.22, y - 0.22], color=INK, linewidth=0.7, zorder=3, alpha=fade)
+        for xe in tc:
+            ax.plot([xe, xe], [y - 0.28, y - 0.16], color=INK, linewidth=0.7, zorder=3, alpha=fade)
     if not np.isnan(ci[0]):
-        ax.plot(ci, [y, y], color=INK, linewidth=1.6, zorder=3)
-    ax.scatter([d.mean()], [y], s=34, color=INK, zorder=4, marker="D")
+        ax.plot(ci, [y, y], color=INK, linewidth=1.6, zorder=3, alpha=fade)
+    ax.scatter([d.mean()], [y], s=34, color=INK, zorder=4, marker="D", alpha=fade)
 ax.axvline(0, color=MUTED, linewidth=0.8)
 ax.set_yticks([y for y, _ in ylabels])
 ax.set_yticklabels([s for _, s in ylabels], fontsize=7)
@@ -363,10 +375,70 @@ for side in ("top", "right", "left"):
     ax.spines[side].set_visible(False)
 ax.tick_params(axis="y", length=0)
 ax.set_ylim(-0.6, len(items) - 0.4)
-# Caption for the paper: dots = seeds; diamond and line = mean and 95% bootstrap CI;
-# grey band = +/- minimum detectable effect.
+# Caption for the paper: dots = seeds; diamond and thick line = mean and 95% bootstrap CI;
+# thin bracketed line below = 95% t-interval; grey band = +/- minimum detectable effect; SAC rows faded.
 for ext in ("png", "pdf"):
     fig.savefig(f"figures/main_differences.{ext}", dpi=200, bbox_inches="tight")
+plt.close(fig)
+
+# ---------------------------------------------------------------- Figure: penalty over training (paired, per evaluation)
+def paired_curve(a_cond, b_cond, smooth=3):
+    ss = sorted(set(seeds(runs, "crossq", a_cond)) & set(seeds(runs, "crossq", b_cond)))
+    L = min(min(len(runs[("crossq", c, s)]["r"]) for s in ss) for c in (a_cond, b_cond))
+    D = np.array([np.convolve(runs[("crossq", a_cond, s)]["r"][:L] - runs[("crossq", b_cond, s)]["r"][:L],
+                              np.ones(smooth) / smooth, "valid") for s in ss])
+    tt = runs[("crossq", a_cond, ss[0])]["t"][:L][smooth // 2: smooth // 2 + D.shape[1]]
+    B = np.random.default_rng(0).integers(0, len(ss), (2000, len(ss)))
+    lo, hi = np.percentile(D[B].mean(1), [2.5, 97.5], axis=0)
+    return tt / 1000, D.mean(0), lo, hi, len(ss)
+
+
+fig, axes = plt.subplots(2, 1, figsize=(3.4, 3.5), sharex=True, sharey=True)
+for ax, cond, win, wlab, mark in ((axes[0], "drift", (400, 500), "H1 window", (400, "drift ends")),
+                                  (axes[1], "sudden", (255, 350), "H4 window", (250, "sudden drop"))):
+    tt, m, lo, hi, n = paired_curve("fixed", cond)
+    ax.axvspan(*win, color=GRID, alpha=0.6, linewidth=0, zorder=0)
+    ax.fill_between(tt, lo, hi, color=COLOR[cond], alpha=0.22, linewidth=0)
+    ax.plot(tt, m, color=COLOR[cond], linewidth=1.5)
+    ax.axhline(0, color=INK, linewidth=0.7)
+    ax.axvline(mark[0], color=MUTED, linestyle=(0, (2, 2)), linewidth=0.8)
+    ax.text(mark[0] - 6, 170, mark[1], rotation=90, ha="right", va="top", fontsize=6.5, color=MUTED)
+    ax.text(sum(win) / 2, -175, wlab, ha="center", va="bottom", fontsize=6.5, color=MUTED)
+    ax.set_title(f"Fixed minus {LABEL[cond]} (n = {n} seed pairs)", fontsize=8)
+    ax.set_ylabel("Penalty in return")
+    ax.set_ylim(-185, 185)
+    ax.grid(axis="y", color=GRID, linewidth=0.6)
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+axes[1].set_xlabel("Training steps (thousands)")
+fig.subplots_adjust(hspace=0.35)
+for ext in ("png", "pdf"):
+    fig.savefig(f"figures/penalty_time.{ext}", dpi=200, bbox_inches="tight")
+plt.close(fig)
+
+
+# ---------------------------------------------------------------- Figure: around the sudden drop (seeds with a Sudden run)
+SS = seeds(runs, "crossq", "sudden")
+fig, ax = plt.subplots(figsize=(3.4, 2.3))
+for c in ("nofatigue", "fixed", "sudden"):
+    t = runs[("crossq", c, SS[0])]["t"]
+    m = (t > 195_000) & (t <= 350_000)
+    Y = np.array([runs[("crossq", c, s)]["r"][m] for s in SS])
+    B = np.random.default_rng(0).integers(0, len(SS), (2000, len(SS)))
+    lo, hi = np.percentile(Y[B].mean(1), [2.5, 97.5], axis=0)
+    ax.fill_between(t[m] / 1000, lo, hi, color=COLOR[c], alpha=0.15, linewidth=0)
+    ax.plot(t[m] / 1000, Y.mean(0), color=COLOR[c], linewidth=1.4, marker="o", markersize=2.2, label=LABEL[c])
+ax.axvline(250, color=MUTED, linestyle=(0, (2, 2)), linewidth=0.8)
+ax.text(252, ax.get_ylim()[1], "sudden drop", ha="left", va="top", fontsize=6.5, color=MUTED)
+ax.set_xlabel("Training steps (thousands)")
+ax.set_ylabel("Evaluation return")
+ax.set_xlim(195, 350)
+ax.grid(axis="y", color=GRID, linewidth=0.6)
+for side in ("top", "right"):
+    ax.spines[side].set_visible(False)
+ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.2), ncol=3, frameon=False, fontsize=7, handlelength=1.4)
+for ext in ("png", "pdf"):
+    fig.savefig(f"figures/sudden_zoom.{ext}", dpi=200, bbox_inches="tight")
 plt.close(fig)
 
 print(open("tables/main_results.md").read())
