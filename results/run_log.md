@@ -62,3 +62,7 @@
 | main_handreach_sac_fixed_seed15_20261115T054817Z | configs/main/handreach_sac_fixed.cfg | 15 | 0 | 82 | |
 | main_handreach_sac_drift_seed15_20261115T061857Z | configs/main/handreach_sac_drift.cfg | 15 | 0 | 84 | |
 | main_handreach_sac_nofatigue_seed15_20261115T071028Z | configs/main/handreach_sac_nofatigue.cfg | 15 | 0 | 74 | |
+
+## Runs kept outside results/raw
+
+The three elbow-task pilots of 6 Nov 2026 (CrossQ, SAC first attempt with wrong flags, SAC rerun) are in `results/pilot_elbow/`, with their own README. They predate `run_experiment.sh` and are not used in any reported analysis.

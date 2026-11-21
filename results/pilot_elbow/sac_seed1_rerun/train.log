@@ -1,0 +1,1479 @@
+/kaggle/working/env/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/kaggle/working/env/lib/python3.11/site-packages/torch/utils/tensorboard/__init__.py:4: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if not hasattr(tensorboard, "__version__") or LooseVersion(
+/kaggle/working/env/lib/python3.11/site-packages/torch/utils/tensorboard/__init__.py:6: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  ) < LooseVersion("1.15"):
+/kaggle/working/env/lib/python3.11/site-packages/flax/linen/module.py:77: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  KeyArray = Union[jax.Array, jax.random.KeyArray]  # pylint: disable=invalid-name
+/kaggle/working/env/lib/python3.11/site-packages/flax/linen/recurrent.py:45: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  PRNGKey = jax.random.KeyArray
+/kaggle/working/env/lib/python3.11/site-packages/flax/linen/recurrent.py:753: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  init_key: Optional[random.KeyArray] = None,
+/kaggle/working/env/lib/python3.11/site-packages/flax/linen/recurrent.py:979: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  init_key: Optional[random.KeyArray] = None,
+/kaggle/working/env/lib/python3.11/site-packages/flax/linen/recurrent.py:1003: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  init_key: Optional[random.KeyArray] = None,
+/kaggle/working/env/lib/python3.11/site-packages/flax/linen/stochastic.py:28: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  KeyArray = Union[jax.Array, jax.random.KeyArray]
+/kaggle/working/CrossQ/sbx/sac/policies.py:379: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  def build(self, key: jax.random.KeyArray, lr_schedule: Schedule, qf_learning_rate: float) -> jax.random.KeyArray:
+/kaggle/working/CrossQ/sbx/sac/policies.py:379: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  def build(self, key: jax.random.KeyArray, lr_schedule: Schedule, qf_learning_rate: float) -> jax.random.KeyArray:
+/kaggle/working/CrossQ/sbx/sac/sac.py:264: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  key: jax.random.KeyArray,
+/kaggle/working/CrossQ/sbx/sac/sac.py:360: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  key: jax.random.KeyArray,
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/gymnasium/envs/registration.py:788: UserWarning: [33mWARN: The environment is being initialised with render_mode='rgb_array' that is not in the possible render_modes ([]).[0m
+  logger.warn(
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/tensorflow_probability/python/internal/backend/jax/numpy_math.py:169: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return (int(x),)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+/kaggle/working/env/lib/python3.11/site-packages/flax/core/lift.py:66: DeprecationWarning: jax.random.KeyArray is deprecated. Use jax.Array for annotations, and jax.dtypes.issubdtype(arr.dtype, jax.dtypes.prng_key) for runtime detection of typed prng keys.
+  fn, tree, is_leaf=lambda x: isinstance(x, random.KeyArray)
+MyoSuite:> Registering Myo Envs
+    MyoSuite: A contact-rich simulation suite for musculoskeletal motor control
+        Vittorio Caggiano, Huawei Wang, Guillaume Durandau, Massimo Sartori, Vikash Kumar
+        L4DC-2019 | https://sites.google.com/view/myosuite
+    
+Warning: Unused kwargs found: {'render_mode': 'rgb_array'}
+Warning: Unused kwargs found: {'render_mode': 'rgb_array'}
+Eval num_timesteps=1, episode_reward=0.44 +/- 123.52
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=500, episode_reward=183.03 +/- 363.90
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=1000, episode_reward=76.65 +/- 323.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=1500, episode_reward=76.87 +/- 306.75
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=2000, episode_reward=93.73 +/- 269.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=2500, episode_reward=91.44 +/- 306.62
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=3000, episode_reward=134.13 +/- 324.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=3500, episode_reward=125.92 +/- 321.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=4000, episode_reward=73.91 +/- 256.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=4500, episode_reward=135.00 +/- 318.83
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=5000, episode_reward=-16.54 +/- 61.15
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=5500, episode_reward=466.73 +/- 235.51
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=6000, episode_reward=751.55 +/- 38.15
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=6500, episode_reward=745.28 +/- 19.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=7000, episode_reward=750.50 +/- 11.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=7500, episode_reward=769.00 +/- 19.77
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=8000, episode_reward=764.02 +/- 21.67
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=8500, episode_reward=761.65 +/- 15.89
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=9000, episode_reward=763.12 +/- 17.75
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=9500, episode_reward=762.87 +/- 19.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=10000, episode_reward=775.28 +/- 11.85
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=10500, episode_reward=752.45 +/- 23.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=11000, episode_reward=767.12 +/- 14.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=11500, episode_reward=758.91 +/- 22.14
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=12000, episode_reward=758.01 +/- 19.83
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=12500, episode_reward=762.73 +/- 11.35
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=13000, episode_reward=760.15 +/- 15.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=13500, episode_reward=753.38 +/- 20.16
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=14000, episode_reward=754.75 +/- 18.24
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=14500, episode_reward=764.46 +/- 19.86
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=15000, episode_reward=766.21 +/- 14.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=15500, episode_reward=766.04 +/- 18.51
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=16000, episode_reward=766.08 +/- 20.39
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=16500, episode_reward=754.82 +/- 19.10
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=17000, episode_reward=766.99 +/- 14.17
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=17500, episode_reward=748.66 +/- 21.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=18000, episode_reward=741.93 +/- 26.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=18500, episode_reward=762.17 +/- 14.90
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=19000, episode_reward=764.90 +/- 12.28
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=19500, episode_reward=757.29 +/- 21.26
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=20000, episode_reward=760.03 +/- 18.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=20500, episode_reward=744.85 +/- 12.65
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=21000, episode_reward=758.76 +/- 21.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=21500, episode_reward=755.21 +/- 19.55
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=22000, episode_reward=765.17 +/- 15.00
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=22500, episode_reward=754.68 +/- 18.67
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=23000, episode_reward=760.92 +/- 11.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=23500, episode_reward=750.65 +/- 19.78
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=24000, episode_reward=769.10 +/- 15.72
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=24500, episode_reward=672.15 +/- 142.55
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=25000, episode_reward=753.13 +/- 10.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=25500, episode_reward=754.06 +/- 14.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=26000, episode_reward=762.79 +/- 14.40
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=26500, episode_reward=749.84 +/- 12.47
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=27000, episode_reward=761.64 +/- 19.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=27500, episode_reward=743.99 +/- 39.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=28000, episode_reward=760.85 +/- 23.03
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=28500, episode_reward=761.78 +/- 13.81
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=29000, episode_reward=761.95 +/- 15.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=29500, episode_reward=766.29 +/- 20.28
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=30000, episode_reward=751.79 +/- 16.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=30500, episode_reward=762.52 +/- 16.43
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=31000, episode_reward=759.20 +/- 13.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=31500, episode_reward=760.53 +/- 13.34
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=32000, episode_reward=762.02 +/- 12.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=32500, episode_reward=757.43 +/- 14.99
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=33000, episode_reward=764.68 +/- 13.04
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=33500, episode_reward=765.15 +/- 16.34
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=34000, episode_reward=754.35 +/- 24.03
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=34500, episode_reward=759.70 +/- 13.79
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=35000, episode_reward=749.80 +/- 14.13
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=35500, episode_reward=758.84 +/- 22.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=36000, episode_reward=774.10 +/- 13.83
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=36500, episode_reward=766.09 +/- 13.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=37000, episode_reward=759.19 +/- 15.67
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=37500, episode_reward=753.12 +/- 21.69
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=38000, episode_reward=758.18 +/- 15.68
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=38500, episode_reward=758.10 +/- 12.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=39000, episode_reward=766.81 +/- 18.82
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=39500, episode_reward=766.13 +/- 9.56
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=40000, episode_reward=766.60 +/- 14.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=40500, episode_reward=756.93 +/- 10.57
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=41000, episode_reward=755.08 +/- 21.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=41500, episode_reward=753.01 +/- 18.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=42000, episode_reward=722.92 +/- 83.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=42500, episode_reward=747.26 +/- 22.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=43000, episode_reward=757.56 +/- 17.68
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=43500, episode_reward=765.88 +/- 8.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=44000, episode_reward=764.41 +/- 17.57
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=44500, episode_reward=763.44 +/- 11.45
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=45000, episode_reward=760.67 +/- 16.92
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=45500, episode_reward=754.48 +/- 23.51
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=46000, episode_reward=754.69 +/- 13.27
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=46500, episode_reward=753.81 +/- 17.19
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=47000, episode_reward=756.71 +/- 17.65
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=47500, episode_reward=767.38 +/- 7.67
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=48000, episode_reward=759.15 +/- 20.47
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=48500, episode_reward=764.21 +/- 13.99
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=49000, episode_reward=766.46 +/- 14.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=49500, episode_reward=768.24 +/- 12.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=50000, episode_reward=762.44 +/- 16.57
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=50500, episode_reward=760.10 +/- 20.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=51000, episode_reward=767.76 +/- 16.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=51500, episode_reward=759.20 +/- 18.68
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=52000, episode_reward=755.92 +/- 20.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=52500, episode_reward=756.86 +/- 19.06
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=53000, episode_reward=753.87 +/- 18.90
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=53500, episode_reward=768.65 +/- 16.17
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=54000, episode_reward=750.58 +/- 29.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=54500, episode_reward=763.70 +/- 14.03
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=55000, episode_reward=763.69 +/- 17.89
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=55500, episode_reward=772.07 +/- 12.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=56000, episode_reward=776.59 +/- 12.19
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=56500, episode_reward=758.27 +/- 17.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=57000, episode_reward=770.24 +/- 13.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=57500, episode_reward=769.85 +/- 13.62
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=58000, episode_reward=755.98 +/- 14.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=58500, episode_reward=763.56 +/- 16.03
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=59000, episode_reward=767.80 +/- 9.63
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=59500, episode_reward=771.96 +/- 18.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=60000, episode_reward=763.54 +/- 17.89
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=60500, episode_reward=774.16 +/- 14.63
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=61000, episode_reward=764.73 +/- 8.42
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=61500, episode_reward=762.98 +/- 12.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=62000, episode_reward=765.61 +/- 11.40
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=62500, episode_reward=760.99 +/- 23.37
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=63000, episode_reward=752.78 +/- 16.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=63500, episode_reward=763.62 +/- 18.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=64000, episode_reward=765.21 +/- 17.41
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=64500, episode_reward=762.79 +/- 16.64
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=65000, episode_reward=766.62 +/- 13.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=65500, episode_reward=769.70 +/- 17.34
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=66000, episode_reward=761.36 +/- 13.07
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=66500, episode_reward=767.10 +/- 17.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=67000, episode_reward=764.31 +/- 19.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=67500, episode_reward=769.60 +/- 12.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=68000, episode_reward=763.65 +/- 21.24
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=68500, episode_reward=773.26 +/- 15.33
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=69000, episode_reward=766.61 +/- 19.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=69500, episode_reward=756.70 +/- 13.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=70000, episode_reward=769.87 +/- 17.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=70500, episode_reward=768.20 +/- 11.76
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=71000, episode_reward=768.00 +/- 13.00
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=71500, episode_reward=771.14 +/- 16.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=72000, episode_reward=767.13 +/- 16.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=72500, episode_reward=760.77 +/- 17.34
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=73000, episode_reward=770.99 +/- 17.00
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=73500, episode_reward=765.63 +/- 14.17
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=74000, episode_reward=760.73 +/- 15.59
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=74500, episode_reward=760.25 +/- 16.48
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=75000, episode_reward=765.82 +/- 15.33
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=75500, episode_reward=764.25 +/- 12.84
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=76000, episode_reward=760.57 +/- 15.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=76500, episode_reward=757.11 +/- 21.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=77000, episode_reward=760.25 +/- 19.82
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=77500, episode_reward=760.55 +/- 17.12
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=78000, episode_reward=766.19 +/- 15.54
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=78500, episode_reward=766.05 +/- 21.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=79000, episode_reward=761.85 +/- 18.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=79500, episode_reward=763.96 +/- 20.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=80000, episode_reward=763.86 +/- 19.86
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=80500, episode_reward=776.50 +/- 17.26
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=81000, episode_reward=768.34 +/- 12.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=81500, episode_reward=770.56 +/- 16.48
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=82000, episode_reward=770.77 +/- 12.10
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=82500, episode_reward=764.73 +/- 23.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=83000, episode_reward=771.61 +/- 15.27
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=83500, episode_reward=759.33 +/- 22.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=84000, episode_reward=762.54 +/- 18.86
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=84500, episode_reward=763.08 +/- 15.38
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=85000, episode_reward=762.11 +/- 14.52
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=85500, episode_reward=761.82 +/- 17.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=86000, episode_reward=769.14 +/- 14.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=86500, episode_reward=760.47 +/- 20.31
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=87000, episode_reward=763.99 +/- 13.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=87500, episode_reward=759.01 +/- 13.44
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=88000, episode_reward=777.39 +/- 12.33
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=88500, episode_reward=762.66 +/- 16.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=89000, episode_reward=769.50 +/- 12.45
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=89500, episode_reward=760.49 +/- 11.19
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=90000, episode_reward=762.05 +/- 17.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=90500, episode_reward=769.32 +/- 12.43
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=91000, episode_reward=760.33 +/- 24.00
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=91500, episode_reward=765.56 +/- 18.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=92000, episode_reward=762.42 +/- 21.82
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=92500, episode_reward=757.74 +/- 20.02
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=93000, episode_reward=769.35 +/- 18.72
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=93500, episode_reward=755.66 +/- 13.59
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=94000, episode_reward=762.15 +/- 24.56
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=94500, episode_reward=767.85 +/- 17.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=95000, episode_reward=758.90 +/- 23.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=95500, episode_reward=772.77 +/- 13.27
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=96000, episode_reward=770.44 +/- 20.33
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=96500, episode_reward=771.16 +/- 16.63
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=97000, episode_reward=761.66 +/- 18.60
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=97500, episode_reward=758.66 +/- 22.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=98000, episode_reward=770.33 +/- 12.73
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=98500, episode_reward=762.84 +/- 16.89
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=99000, episode_reward=770.79 +/- 18.78
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=99500, episode_reward=771.79 +/- 20.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=100000, episode_reward=769.52 +/- 20.02
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=100500, episode_reward=766.45 +/- 20.56
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=101000, episode_reward=766.55 +/- 15.34
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=101500, episode_reward=769.92 +/- 20.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=102000, episode_reward=775.66 +/- 11.15
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=102500, episode_reward=774.40 +/- 12.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=103000, episode_reward=764.77 +/- 21.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=103500, episode_reward=762.76 +/- 18.02
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=104000, episode_reward=764.08 +/- 16.24
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=104500, episode_reward=761.49 +/- 19.76
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=105000, episode_reward=771.99 +/- 15.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=105500, episode_reward=758.56 +/- 15.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=106000, episode_reward=762.53 +/- 17.89
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=106500, episode_reward=765.45 +/- 20.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=107000, episode_reward=776.24 +/- 12.41
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=107500, episode_reward=759.41 +/- 16.18
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=108000, episode_reward=765.27 +/- 16.38
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=108500, episode_reward=761.66 +/- 14.99
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=109000, episode_reward=771.90 +/- 10.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=109500, episode_reward=759.84 +/- 18.57
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=110000, episode_reward=770.77 +/- 12.43
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=110500, episode_reward=770.78 +/- 14.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=111000, episode_reward=761.23 +/- 18.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=111500, episode_reward=764.53 +/- 20.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=112000, episode_reward=775.35 +/- 18.27
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=112500, episode_reward=775.94 +/- 17.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=113000, episode_reward=770.15 +/- 15.14
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=113500, episode_reward=772.71 +/- 20.67
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=114000, episode_reward=766.91 +/- 13.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=114500, episode_reward=779.55 +/- 13.49
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=115000, episode_reward=776.93 +/- 15.17
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=115500, episode_reward=759.83 +/- 12.84
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=116000, episode_reward=773.43 +/- 13.03
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=116500, episode_reward=767.01 +/- 18.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=117000, episode_reward=757.00 +/- 22.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=117500, episode_reward=764.54 +/- 20.04
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=118000, episode_reward=780.58 +/- 14.86
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=118500, episode_reward=763.66 +/- 21.69
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=119000, episode_reward=764.95 +/- 20.13
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=119500, episode_reward=753.98 +/- 21.65
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=120000, episode_reward=763.75 +/- 12.00
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=120500, episode_reward=757.84 +/- 17.08
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=121000, episode_reward=773.14 +/- 15.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=121500, episode_reward=756.59 +/- 18.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=122000, episode_reward=773.84 +/- 15.49
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=122500, episode_reward=774.50 +/- 14.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=123000, episode_reward=763.53 +/- 15.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=123500, episode_reward=762.62 +/- 17.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=124000, episode_reward=767.97 +/- 15.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=124500, episode_reward=761.72 +/- 18.48
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=125000, episode_reward=771.36 +/- 16.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=125500, episode_reward=759.08 +/- 26.14
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=126000, episode_reward=767.37 +/- 18.67
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=126500, episode_reward=772.54 +/- 14.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=127000, episode_reward=769.81 +/- 16.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=127500, episode_reward=756.35 +/- 22.97
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=128000, episode_reward=770.95 +/- 14.49
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=128500, episode_reward=761.95 +/- 16.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=129000, episode_reward=758.77 +/- 19.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=129500, episode_reward=772.29 +/- 10.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=130000, episode_reward=768.53 +/- 14.01
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=130500, episode_reward=775.50 +/- 15.99
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=131000, episode_reward=769.57 +/- 22.72
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=131500, episode_reward=759.28 +/- 24.97
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=132000, episode_reward=766.83 +/- 17.84
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=132500, episode_reward=765.63 +/- 25.37
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=133000, episode_reward=757.55 +/- 21.72
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=133500, episode_reward=765.19 +/- 20.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=134000, episode_reward=770.29 +/- 14.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=134500, episode_reward=754.18 +/- 13.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=135000, episode_reward=775.23 +/- 14.77
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=135500, episode_reward=779.17 +/- 9.62
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=136000, episode_reward=771.21 +/- 14.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=136500, episode_reward=779.12 +/- 13.19
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=137000, episode_reward=768.57 +/- 19.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=137500, episode_reward=767.13 +/- 15.91
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=138000, episode_reward=763.45 +/- 19.51
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=138500, episode_reward=763.59 +/- 14.84
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=139000, episode_reward=777.28 +/- 14.48
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=139500, episode_reward=776.92 +/- 14.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=140000, episode_reward=772.74 +/- 17.37
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=140500, episode_reward=766.92 +/- 18.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=141000, episode_reward=765.79 +/- 12.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=141500, episode_reward=769.36 +/- 20.00
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=142000, episode_reward=772.05 +/- 11.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=142500, episode_reward=771.70 +/- 22.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=143000, episode_reward=757.23 +/- 20.82
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=143500, episode_reward=770.52 +/- 18.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=144000, episode_reward=771.14 +/- 17.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=144500, episode_reward=754.54 +/- 20.33
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=145000, episode_reward=771.41 +/- 10.34
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=145500, episode_reward=781.49 +/- 14.23
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=146000, episode_reward=760.30 +/- 19.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=146500, episode_reward=757.44 +/- 18.39
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=147000, episode_reward=771.86 +/- 18.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=147500, episode_reward=764.53 +/- 16.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=148000, episode_reward=766.61 +/- 12.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=148500, episode_reward=761.41 +/- 18.75
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=149000, episode_reward=766.37 +/- 23.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=149500, episode_reward=770.00 +/- 13.19
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=150000, episode_reward=765.16 +/- 18.84
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=150500, episode_reward=770.10 +/- 18.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=151000, episode_reward=769.40 +/- 16.37
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=151500, episode_reward=775.42 +/- 12.64
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=152000, episode_reward=771.74 +/- 18.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=152500, episode_reward=771.91 +/- 15.69
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=153000, episode_reward=768.95 +/- 14.31
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=153500, episode_reward=762.01 +/- 17.73
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=154000, episode_reward=764.25 +/- 13.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=154500, episode_reward=762.03 +/- 13.91
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=155000, episode_reward=777.35 +/- 14.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=155500, episode_reward=763.82 +/- 5.76
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=156000, episode_reward=760.15 +/- 23.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=156500, episode_reward=776.05 +/- 17.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=157000, episode_reward=771.59 +/- 21.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=157500, episode_reward=777.14 +/- 12.81
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=158000, episode_reward=767.65 +/- 13.15
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=158500, episode_reward=765.77 +/- 19.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=159000, episode_reward=774.73 +/- 15.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=159500, episode_reward=767.38 +/- 19.92
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=160000, episode_reward=766.76 +/- 13.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=160500, episode_reward=770.95 +/- 15.25
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=161000, episode_reward=768.73 +/- 16.57
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=161500, episode_reward=764.85 +/- 24.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=162000, episode_reward=775.88 +/- 20.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=162500, episode_reward=768.62 +/- 16.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=163000, episode_reward=772.05 +/- 18.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=163500, episode_reward=767.35 +/- 22.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=164000, episode_reward=760.90 +/- 17.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=164500, episode_reward=753.45 +/- 25.02
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=165000, episode_reward=767.26 +/- 10.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=165500, episode_reward=767.43 +/- 16.25
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=166000, episode_reward=771.42 +/- 13.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=166500, episode_reward=769.17 +/- 16.99
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=167000, episode_reward=768.00 +/- 20.47
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=167500, episode_reward=766.83 +/- 16.26
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=168000, episode_reward=765.44 +/- 8.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=168500, episode_reward=770.46 +/- 20.06
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=169000, episode_reward=774.13 +/- 15.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=169500, episode_reward=761.51 +/- 16.91
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=170000, episode_reward=767.08 +/- 14.64
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=170500, episode_reward=773.28 +/- 13.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=171000, episode_reward=772.88 +/- 14.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=171500, episode_reward=762.57 +/- 20.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=172000, episode_reward=763.37 +/- 16.45
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=172500, episode_reward=765.72 +/- 16.72
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=173000, episode_reward=765.74 +/- 17.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=173500, episode_reward=774.11 +/- 16.24
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=174000, episode_reward=768.57 +/- 12.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=174500, episode_reward=768.49 +/- 16.06
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=175000, episode_reward=765.14 +/- 21.40
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=175500, episode_reward=770.55 +/- 12.06
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=176000, episode_reward=769.22 +/- 12.37
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=176500, episode_reward=765.44 +/- 17.26
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=177000, episode_reward=758.78 +/- 21.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=177500, episode_reward=760.01 +/- 21.78
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=178000, episode_reward=761.43 +/- 20.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=178500, episode_reward=771.30 +/- 19.75
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=179000, episode_reward=768.38 +/- 13.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=179500, episode_reward=774.03 +/- 15.40
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=180000, episode_reward=763.40 +/- 12.99
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=180500, episode_reward=771.71 +/- 16.41
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=181000, episode_reward=765.69 +/- 17.49
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=181500, episode_reward=766.90 +/- 17.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=182000, episode_reward=771.38 +/- 10.92
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=182500, episode_reward=770.85 +/- 19.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=183000, episode_reward=770.21 +/- 14.77
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=183500, episode_reward=759.80 +/- 22.91
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=184000, episode_reward=765.90 +/- 13.18
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=184500, episode_reward=773.89 +/- 13.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=185000, episode_reward=757.32 +/- 14.31
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=185500, episode_reward=775.08 +/- 19.01
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=186000, episode_reward=766.05 +/- 14.51
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=186500, episode_reward=771.51 +/- 23.81
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=187000, episode_reward=769.52 +/- 12.31
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=187500, episode_reward=756.76 +/- 14.36
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=188000, episode_reward=776.50 +/- 11.39
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=188500, episode_reward=760.30 +/- 17.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=189000, episode_reward=770.65 +/- 20.42
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=189500, episode_reward=757.23 +/- 19.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=190000, episode_reward=756.30 +/- 10.90
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=190500, episode_reward=770.65 +/- 21.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=191000, episode_reward=766.50 +/- 14.51
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=191500, episode_reward=773.33 +/- 17.15
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=192000, episode_reward=771.38 +/- 20.14
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=192500, episode_reward=760.34 +/- 13.81
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=193000, episode_reward=758.93 +/- 19.36
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=193500, episode_reward=773.73 +/- 13.12
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=194000, episode_reward=766.70 +/- 13.36
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=194500, episode_reward=761.80 +/- 18.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=195000, episode_reward=770.50 +/- 19.72
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=195500, episode_reward=772.42 +/- 19.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=196000, episode_reward=765.15 +/- 18.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=196500, episode_reward=766.50 +/- 19.38
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=197000, episode_reward=772.09 +/- 15.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=197500, episode_reward=767.29 +/- 10.65
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=198000, episode_reward=770.50 +/- 12.44
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=198500, episode_reward=760.24 +/- 22.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=199000, episode_reward=759.81 +/- 17.10
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=199500, episode_reward=761.98 +/- 17.33
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=200000, episode_reward=777.43 +/- 18.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=200500, episode_reward=768.07 +/- 16.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=201000, episode_reward=760.11 +/- 18.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=201500, episode_reward=772.59 +/- 19.79
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=202000, episode_reward=775.12 +/- 22.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=202500, episode_reward=766.29 +/- 26.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=203000, episode_reward=778.25 +/- 14.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=203500, episode_reward=766.10 +/- 15.01
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=204000, episode_reward=775.92 +/- 19.55
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=204500, episode_reward=773.59 +/- 13.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=205000, episode_reward=766.84 +/- 12.73
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=205500, episode_reward=768.46 +/- 12.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=206000, episode_reward=769.31 +/- 15.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=206500, episode_reward=769.73 +/- 19.27
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=207000, episode_reward=769.01 +/- 14.81
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=207500, episode_reward=762.95 +/- 17.51
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=208000, episode_reward=764.27 +/- 19.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=208500, episode_reward=761.25 +/- 18.54
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=209000, episode_reward=770.59 +/- 21.25
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=209500, episode_reward=770.75 +/- 24.17
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=210000, episode_reward=772.61 +/- 12.07
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=210500, episode_reward=766.24 +/- 14.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=211000, episode_reward=770.30 +/- 22.91
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=211500, episode_reward=767.39 +/- 17.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=212000, episode_reward=766.24 +/- 14.54
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=212500, episode_reward=767.36 +/- 15.60
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=213000, episode_reward=769.63 +/- 14.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=213500, episode_reward=773.19 +/- 12.56
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=214000, episode_reward=772.23 +/- 15.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=214500, episode_reward=770.61 +/- 18.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=215000, episode_reward=775.20 +/- 16.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=215500, episode_reward=765.74 +/- 17.40
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=216000, episode_reward=758.71 +/- 14.05
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=216500, episode_reward=770.53 +/- 14.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=217000, episode_reward=773.16 +/- 13.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=217500, episode_reward=774.92 +/- 16.79
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=218000, episode_reward=764.95 +/- 12.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=218500, episode_reward=771.67 +/- 21.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=219000, episode_reward=769.34 +/- 17.01
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=219500, episode_reward=772.63 +/- 20.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=220000, episode_reward=778.26 +/- 16.02
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=220500, episode_reward=762.95 +/- 15.35
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=221000, episode_reward=770.59 +/- 15.89
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=221500, episode_reward=766.16 +/- 17.04
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=222000, episode_reward=771.49 +/- 13.55
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=222500, episode_reward=780.85 +/- 15.65
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=223000, episode_reward=771.56 +/- 14.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=223500, episode_reward=778.62 +/- 14.34
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=224000, episode_reward=763.01 +/- 20.73
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=224500, episode_reward=766.23 +/- 15.80
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=225000, episode_reward=776.08 +/- 12.67
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=225500, episode_reward=770.94 +/- 11.97
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=226000, episode_reward=768.06 +/- 20.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=226500, episode_reward=767.19 +/- 12.83
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=227000, episode_reward=770.63 +/- 14.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=227500, episode_reward=768.36 +/- 15.92
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=228000, episode_reward=766.47 +/- 16.84
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=228500, episode_reward=781.36 +/- 10.99
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=229000, episode_reward=767.77 +/- 15.60
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=229500, episode_reward=770.70 +/- 12.15
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=230000, episode_reward=767.31 +/- 25.57
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=230500, episode_reward=772.11 +/- 14.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=231000, episode_reward=768.79 +/- 15.06
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=231500, episode_reward=773.30 +/- 18.76
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=232000, episode_reward=773.11 +/- 17.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=232500, episode_reward=764.42 +/- 14.66
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=233000, episode_reward=768.31 +/- 16.10
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=233500, episode_reward=768.68 +/- 19.11
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=234000, episode_reward=775.68 +/- 15.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=234500, episode_reward=765.43 +/- 33.59
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=235000, episode_reward=771.50 +/- 19.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=235500, episode_reward=761.76 +/- 19.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=236000, episode_reward=761.00 +/- 19.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=236500, episode_reward=770.14 +/- 18.97
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=237000, episode_reward=763.96 +/- 14.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=237500, episode_reward=775.65 +/- 11.42
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=238000, episode_reward=772.19 +/- 16.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=238500, episode_reward=763.51 +/- 13.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=239000, episode_reward=768.85 +/- 9.85
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=239500, episode_reward=769.64 +/- 16.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=240000, episode_reward=773.43 +/- 20.41
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=240500, episode_reward=771.59 +/- 12.62
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=241000, episode_reward=768.76 +/- 17.84
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=241500, episode_reward=771.06 +/- 11.14
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=242000, episode_reward=784.03 +/- 11.54
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=242500, episode_reward=775.61 +/- 16.38
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=243000, episode_reward=775.60 +/- 14.01
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=243500, episode_reward=767.50 +/- 19.07
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=244000, episode_reward=765.77 +/- 17.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=244500, episode_reward=776.29 +/- 17.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=245000, episode_reward=771.69 +/- 12.50
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=245500, episode_reward=765.36 +/- 14.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=246000, episode_reward=769.69 +/- 10.64
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=246500, episode_reward=756.35 +/- 10.68
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=247000, episode_reward=771.79 +/- 11.56
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=247500, episode_reward=770.62 +/- 16.15
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=248000, episode_reward=773.56 +/- 13.23
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=248500, episode_reward=764.31 +/- 11.82
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=249000, episode_reward=774.20 +/- 13.26
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=249500, episode_reward=779.38 +/- 10.98
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=250000, episode_reward=774.88 +/- 21.07
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=250500, episode_reward=776.06 +/- 6.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=251000, episode_reward=767.57 +/- 17.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=251500, episode_reward=776.01 +/- 21.39
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=252000, episode_reward=771.41 +/- 16.31
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=252500, episode_reward=754.78 +/- 22.45
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=253000, episode_reward=773.34 +/- 9.83
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=253500, episode_reward=766.66 +/- 19.59
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=254000, episode_reward=764.59 +/- 17.17
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=254500, episode_reward=771.80 +/- 15.93
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=255000, episode_reward=770.26 +/- 19.90
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=255500, episode_reward=772.97 +/- 13.45
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=256000, episode_reward=766.60 +/- 18.25
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=256500, episode_reward=774.01 +/- 13.30
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=257000, episode_reward=771.69 +/- 13.01
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=257500, episode_reward=770.87 +/- 18.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=258000, episode_reward=773.07 +/- 23.13
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=258500, episode_reward=768.61 +/- 14.96
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=259000, episode_reward=772.27 +/- 16.08
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=259500, episode_reward=766.60 +/- 14.74
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=260000, episode_reward=768.85 +/- 12.90
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=260500, episode_reward=773.56 +/- 14.46
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=261000, episode_reward=771.56 +/- 20.78
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=261500, episode_reward=763.17 +/- 22.73
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=262000, episode_reward=776.06 +/- 14.40
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=262500, episode_reward=762.52 +/- 21.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=263000, episode_reward=763.40 +/- 18.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=263500, episode_reward=765.30 +/- 21.92
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=264000, episode_reward=776.67 +/- 15.95
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=264500, episode_reward=773.41 +/- 14.79
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=265000, episode_reward=769.52 +/- 16.27
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=265500, episode_reward=764.66 +/- 16.39
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=266000, episode_reward=758.12 +/- 14.16
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=266500, episode_reward=769.39 +/- 18.39
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=267000, episode_reward=769.79 +/- 19.13
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=267500, episode_reward=778.37 +/- 18.65
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=268000, episode_reward=778.66 +/- 15.29
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=268500, episode_reward=774.89 +/- 13.62
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=269000, episode_reward=766.07 +/- 11.81
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=269500, episode_reward=763.31 +/- 22.62
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=270000, episode_reward=768.25 +/- 16.92
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=270500, episode_reward=771.45 +/- 13.75
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=271000, episode_reward=772.26 +/- 15.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=271500, episode_reward=771.04 +/- 12.38
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=272000, episode_reward=774.53 +/- 17.91
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=272500, episode_reward=774.40 +/- 14.24
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=273000, episode_reward=772.70 +/- 15.61
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=273500, episode_reward=773.62 +/- 17.22
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=274000, episode_reward=765.75 +/- 9.64
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=274500, episode_reward=777.42 +/- 10.88
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=275000, episode_reward=771.93 +/- 12.51
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=275500, episode_reward=770.82 +/- 16.69
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=276000, episode_reward=770.60 +/- 13.90
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=276500, episode_reward=774.65 +/- 18.68
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=277000, episode_reward=766.20 +/- 17.71
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=277500, episode_reward=763.85 +/- 19.81
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=278000, episode_reward=766.33 +/- 12.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=278500, episode_reward=766.65 +/- 12.08
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=279000, episode_reward=772.84 +/- 12.72
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=279500, episode_reward=755.02 +/- 25.47
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=280000, episode_reward=770.59 +/- 19.79
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=280500, episode_reward=762.68 +/- 15.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=281000, episode_reward=774.45 +/- 13.97
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=281500, episode_reward=764.04 +/- 17.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=282000, episode_reward=773.33 +/- 18.10
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=282500, episode_reward=772.13 +/- 15.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=283000, episode_reward=768.00 +/- 18.32
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=283500, episode_reward=763.13 +/- 17.38
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=284000, episode_reward=771.72 +/- 11.57
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=284500, episode_reward=774.07 +/- 16.04
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=285000, episode_reward=767.67 +/- 14.10
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=285500, episode_reward=767.56 +/- 15.82
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=286000, episode_reward=774.59 +/- 12.17
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=286500, episode_reward=774.87 +/- 20.06
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=287000, episode_reward=776.57 +/- 13.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=287500, episode_reward=768.98 +/- 17.40
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=288000, episode_reward=770.24 +/- 18.16
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=288500, episode_reward=769.96 +/- 20.21
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=289000, episode_reward=761.01 +/- 24.68
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=289500, episode_reward=762.93 +/- 19.06
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=290000, episode_reward=778.04 +/- 12.36
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=290500, episode_reward=770.81 +/- 10.60
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=291000, episode_reward=770.62 +/- 13.24
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=291500, episode_reward=761.18 +/- 20.94
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=292000, episode_reward=767.62 +/- 18.70
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=292500, episode_reward=769.75 +/- 16.19
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=293000, episode_reward=774.99 +/- 21.68
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=293500, episode_reward=781.73 +/- 15.20
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=294000, episode_reward=766.19 +/- 25.64
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=294500, episode_reward=764.02 +/- 14.87
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=295000, episode_reward=766.58 +/- 20.01
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=295500, episode_reward=770.92 +/- 17.25
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=296000, episode_reward=772.39 +/- 12.58
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=296500, episode_reward=773.41 +/- 17.62
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=297000, episode_reward=776.87 +/- 11.09
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=297500, episode_reward=778.64 +/- 11.33
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=298000, episode_reward=763.60 +/- 9.04
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=298500, episode_reward=771.71 +/- 13.53
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=299000, episode_reward=785.42 +/- 8.69
+Episode length: 100.00 +/- 0.00
+New best mean reward!
+Eval num_timesteps=299500, episode_reward=767.52 +/- 8.73
+Episode length: 100.00 +/- 0.00
+Eval num_timesteps=300000, episode_reward=776.31 +/- 16.23
+Episode length: 100.00 +/- 0.00
+ 100% ━━━━━━━━━━━━━━━━━━━━━━━━ 300,000/300,000  [ 0:43:58 < 0:00:00 , 112 it/s ]
