@@ -324,7 +324,7 @@ def curves_figure(nrows, ncols, figsize, name):
             ax.axvline(xv, color=MUTED, linestyle=(0, (2, 2)), linewidth=0.8, zorder=1)
             ax.text(xv, 1.01, lab, transform=ax.get_xaxis_transform(), ha="center", va="bottom",
                     fontsize=6.2, color=MUTED, linespacing=0.95)
-        title = "CrossQ: 8 seeds per condition (Sudden 5)" if a == "crossq" else "SAC: 5 seeds per condition (Sudden not run)"
+        title = "CrossQ, 8 seeds per condition (Sudden 5)" if a == "crossq" else "SAC, 5 seeds per condition (Sudden not run)"
         ax.set_title(title, fontsize=8, pad=16)
         ax.set_ylabel("Evaluation return")
         ax.grid(axis="y", color=GRID, linewidth=0.6)
@@ -353,7 +353,7 @@ fig, ax = plt.subplots(figsize=(3.5, 0.45 * len(items) + 0.8))
 ylabels = []
 for i, ((algo, lab), (ss, d, ci, md_)) in enumerate(items):
     y = len(items) - 1 - i
-    ylabels.append((y, f"{dict(ALGOS)[algo]}: {lab.split(' (')[0]}\n(n = {len(d)})"))
+    ylabels.append((y, f"{dict(ALGOS)[algo]}, {lab.split(' (')[0].lower()}\n(n = {len(d)})"))
     if not np.isnan(md_):
         ax.plot([-md_, md_], [y, y], color=GRID, linewidth=7, solid_capstyle="butt", zorder=0)
     fade = 0.4 if algo == "sac" else 1.0          # SAC tests were not testable (SAC did not learn)

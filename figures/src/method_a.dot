@@ -13,7 +13,7 @@ digraph a {
   buffer [label=<<TABLE BORDER="0" CELLPADDING="0.6" CELLSPACING="0"><TR><TD><B><FONT COLOR="#6f6e69">Replay buffer</FONT></B></TD></TR><TR><TD>1M transitions</TD></TR><TR><TD><FONT POINT-SIZE="6" COLOR="#6f6e69">holds the whole run</FONT></TD></TR></TABLE>>,
           color="#6f6e69", fillcolor="#f2f1ee"];
   { rank=same; agent; env; }
-  agent -> env [label=<<I>a</I><SUB>t</SUB>: 39 muscle<BR/>activations>];
+  agent -> env [label=<<I>a</I><SUB>t</SUB>, 39 muscle<BR/>activations>];
   env -> agent [label=<<I>s</I><SUB>t</SUB>>];
   env -> buffer [label=< transition<BR/> (<I>s</I><SUB>t</SUB>, <I>a</I><SUB>t</SUB>, <I>r</I><SUB>t+1</SUB>, <I>s</I><SUB>t+1</SUB> )>];
   buffer -> agent [label=<uniform  <BR/>batch of 256  >];

@@ -61,7 +61,7 @@ PANEL_A = f'''digraph a {{ {COMMON}
   buffer [label={card("Replay buffer", GREY, ["1M transitions"], "holds the whole run")},
           color="{GREY}", fillcolor="{GREY_F}"];
   {{ rank=same; agent; env; }}
-  agent -> env [label=<{it("a", "t")}: 39 muscle<BR/>activations>];
+  agent -> env [label=<{it("a", "t")}, 39 muscle<BR/>activations>];
   env -> agent [label=<{it("s", "t")}>];
   env -> buffer [label=< transition<BR/> ({it("s", "t")}, {it("a", "t")}, {it("r", "t+1")}, {it("s", "t+1")} )>];
   buffer -> agent [label=<uniform  <BR/>batch of 256  >];

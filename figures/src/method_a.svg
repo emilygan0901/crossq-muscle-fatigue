@@ -45,7 +45,7 @@
 <polygon fill="#6f6e69" stroke="#6f6e69" stroke-width="0.6" points="137.68,-95.58 142.18,-94 137.68,-92.43 137.68,-95.58"/>
 <text text-anchor="start" x="83.25" y="-105.8" font-family="Liberation Sans" font-style="italic" font-size="6.50" fill="#222222">a</text>
 <text text-anchor="start" x="87.25" y="-105.8" font-family="Liberation Sans" baseline-shift="sub" font-size="6.50" fill="#222222">t</text>
-<text text-anchor="start" x="89.25" y="-105.8" font-family="Liberation Sans" font-size="6.50" fill="#222222">: 39 muscle</text>
+<text text-anchor="start" x="89.25" y="-105.8" font-family="Liberation Sans" font-size="6.50" fill="#222222">, 39 muscle</text>
 <text text-anchor="start" x="87.25" y="-99.3" font-family="Liberation Sans" font-size="6.50" fill="#222222">activations</text>
 </g>
 <!-- env&#45;&gt;agent -->
