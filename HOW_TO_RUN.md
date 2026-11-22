@@ -104,6 +104,11 @@ python scripts/analyze_repro.py results     # -> figures/repro_walker2d.*, table
 python scripts/analyze_h1.py results        # -> tables/h1_crossq.md (primary test H1)
 python scripts/analyze_ramp.py results      # -> figures/ramp_crossq.*, tables/ramp_crossq.md (dip during the ramp)
 python scripts/analyze_main.py results      # -> figures/{schedules,main_curves,main_differences}.*, tables/{main_results,hypotheses,settings_compute}.*
+python scripts/analyze_sudden_windows.py results  # -> tables/sudden_windows.md (paired CIs around the sudden drop)
+python scripts/analyze_variation.py results       # -> tables/run_to_run_variation.md (identical runs, different results)
+python scripts/analyze_sweep.py results           # -> figures/fatigue_sweep.*, tables/sweep_crossq.md (Amendment 4)
+python scripts/check_activation_saturation.py     # -> results/activation_saturation.csv (MyoSuite environment)
+python scripts/make_method_figure.py              # -> figures/method_figure.* (needs Graphviz dot and rsvg-convert)
 ```
 
 ## What each run folder contains
