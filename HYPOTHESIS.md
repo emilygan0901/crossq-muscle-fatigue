@@ -79,6 +79,7 @@ updates at the default momentum, far shorter than the 400k-step drift.
 | 5 | CrossQ Fixed + Drift seeds 16-18 (rule 2); pilot of CrossQ without batch normalisation, seed 1 (7 runs) | done 14 Nov (all exit 0). Pilot FAILED the pre-registered rule (solved fraction 0.00 over 400k-500k, return 53; rule: at least 0.20) |
 | 6 | CrossQ No fatigue seeds 16-18 (rule 2); SAC Fixed + Drift + No fatigue seeds 13-15 (12 runs) | done 15 Nov (all exit 0). All planned experiments complete |
 | 7-8 | CrossQ without batch normalisation: Fixed, Drift, Sudden, seeds 11-15 (15 runs), only if the pilot passes | not run: pilot failed (Amendment 3); H6 and H7 not testable |
+| 9 | Amendment 4 (exploratory): CrossQ No fatigue + Fixed with a final fatigue sweep, seeds 11-13 (6 runs, `configs/sweep/`) | planned |
 
 Each batch is sized to finish within Kaggle's 12-hour session limit on 2x T4 (CrossQ about 171 min
 and SAC about 90 min per Hand Reach run, measured in the pilot).
@@ -206,3 +207,36 @@ relative to the gap before it, and the comparison of each condition before and a
 
 *Compute.* Remaining: about 18 Kaggle hours of required runs (Batches 5-6), plus about 2.5 hours for
 the pilot and about 17.5 for the variant's main runs if it passes. A margin of 25% is kept for reruns.
+
+**Amendment 4 (21 Nov 2026, exploratory, written before any run it describes).**
+
+*Why.* The main design cannot separate the physical cost of weaker muscles from any cost of having
+learned under different dynamics, because Sudden and Fixed differ in their whole training history at
+the drop (the history confound). The single evaluation at 255k suggested the loss is physical. This
+amendment tests that more directly by evaluating trained policies at fixed fatigue levels.
+
+*Runs (Batch 9).* CrossQ No fatigue and CrossQ Fixed, seeds 11-13, with the main experiment's settings
+(500k steps, 10 evaluation episodes every 5,000 steps). After training, the final policy is run
+deterministically for 50 episodes at each fatigue level 0, 0.2, 0.4, 0.5, 0.6 and 0.8, with the same evaluation-
+environment seed at every level so that every level sees the same targets (`src/fatigue_sweep.py`,
+called from a third edit to `train.py` in `patches/crossq_coursework.patch`, active only when
+`FATIGUE_SWEEP` is set). The trained model is also saved. Configs: `configs/sweep/`. These runs are
+new runs, not reruns, and are not pooled with the main experiment.
+
+*Quantities (fixed now, all exploratory, reported with 95% bootstrap CIs and t-intervals over the 3
+seeds, no verdicts).*
+- E1, physical cost. Return of No-fatigue-trained policies against test fatigue level.
+- E2, effect of training under weakness, at the test level it was trained at. At test level 0.5,
+  Fixed-trained minus No-fatigue-trained return, paired by seed.
+- E3, cost of training under weakness at full strength. At test level 0, No-fatigue-trained minus
+  Fixed-trained return, paired by seed.
+- E4, collapse level. For each training condition, the lowest test level at which the mean solved
+  fraction falls below half of its value at level 0 (descriptive).
+
+*Prediction (stated before the runs).* From the 255k observation, E2 is small compared with the
+119-point cost of fatigue, and E1 falls with test level, more steeply above 0.5. With 3 seeds the
+estimates are imprecise, so the results are reported as exploratory evidence only.
+
+*Compute.* 6 CrossQ runs at about 140-160 min each, two at a time on 2x T4, plus about 10 min per run
+for the sweep, so about 8 hours in one Kaggle session (about 16 GPU-hours).
+

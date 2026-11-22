@@ -1,5 +1,5 @@
 diff --git a/train.py b/train.py
-index 789a9ab..ad90b17 100644
+index 789a9ab..7d190a7 100644
 --- a/train.py
 +++ b/train.py
 @@ -22,6 +22,7 @@ from sbx.sac.actor_critic_evaluation_callback import CriticBiasCallback, EvalCal
@@ -20,3 +20,12 @@ index 789a9ab..ad90b17 100644
      )
  
      # Callback that evaluates q bias according to the REDQ paper.
+@@ -234,3 +236,8 @@ with wandb.init(
+         [eval_callback, WandbCallback(verbose=0,)]
+     )
+     model.learn(total_timesteps=total_timesteps, progress_bar=True, callback=callback_list)
++
++    # coursework (Amendment 4): optionally evaluate the final policy at fixed fatigue levels (kit/src/fatigue_sweep.py)
++    if os.environ.get("FATIGUE_SWEEP"):
++        import fatigue_sweep
++        fatigue_sweep.run(model, args.env, seed)

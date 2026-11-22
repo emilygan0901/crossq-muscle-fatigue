@@ -10,11 +10,12 @@ configs/repro/          reproduction of the CrossQ paper (Walker2d, Fig. 5): aut
 configs/pilot/          Hand Reach pilot: fatigue off vs fatigue drift, SAC vs CrossQ (1 seed)
 configs/main/           main experiment: SAC/CrossQ x no fatigue / fixed 0.5 / drift 0->0.5 (seeds 11-15)
 configs/bridge/         Walker2d reproduction settings run in the MyoSuite software setup
+configs/sweep/          Amendment 4: CrossQ No fatigue / Fixed with a final sweep over fatigue levels 0-0.8
 HYPOTHESIS.md           pre-registered hypotheses, metrics, decision rules and batch plan
 tests/test_fatigue_drift.py       checks of src/fatigue_drift.py (CPU, ~1 min)
 scripts/check_builtin_fatigue.py  measures how little MyoSuite's built-in fatigue changes a task
 src/fatigue_drift.py    OUR CODE: fatigue that increases over training (registers *Drift-v0 tasks)
-patches/crossq_coursework.patch   OUR CHANGES to the authors' train.py (2 small edits)
+patches/crossq_coursework.patch   OUR CHANGES to the authors' train.py (3 small edits)
 scripts/run_experiment.sh   runs ONE config with ONE seed and records everything
 scripts/run_batch.sh        runs several config:seed jobs over the available GPUs
 scripts/random_baseline.sh  random-policy reference for a config's task
@@ -35,10 +36,13 @@ notes/run_notes.md      what was run, why, and what happened (written by hand)
 | `CrossQ-baseline/` | authors' code (github.com/adityab/CrossQ), commit `a318a266679bec3f9d93c44e029860a6da077c89`, **unmodified** | reproduction (`configs/repro/`) |
 | `CrossQ-dev/` | same commit **+ `patches/crossq_coursework.patch`** | MyoSuite experiments (`configs/pilot/`, later `configs/main/`) |
 
-The patch makes exactly two changes to `train.py`:
+The patch makes exactly three changes to `train.py`:
 1. `import fatigue_drift`, which registers MyoSuite and our fatigue-drift tasks (`src/` is on `PYTHONPATH`).
 2. The number of evaluation episodes is read from `N_EVAL_EPISODES` (default 1, as in the original).
    MyoSuite tasks draw random targets, so we evaluate on 10 episodes.
+3. After training, if `FATIGUE_SWEEP` is set, the final policy is evaluated at fixed fatigue levels
+   and saved (`src/fatigue_sweep.py`, Amendment 4). Without `FATIGUE_SWEEP` nothing changes, so all
+   earlier runs are unaffected.
 
 Each run records the code commit, the number of changed files (`code_files_changed`) and the
 full diff (`code.diff`), so it is always visible which code a result came from.
