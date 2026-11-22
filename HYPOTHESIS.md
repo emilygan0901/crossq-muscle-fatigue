@@ -79,7 +79,7 @@ updates at the default momentum, far shorter than the 400k-step drift.
 | 5 | CrossQ Fixed + Drift seeds 16-18 (rule 2); pilot of CrossQ without batch normalisation, seed 1 (7 runs) | done 14 Nov (all exit 0). Pilot FAILED the pre-registered rule (solved fraction 0.00 over 400k-500k, return 53; rule: at least 0.20) |
 | 6 | CrossQ No fatigue seeds 16-18 (rule 2); SAC Fixed + Drift + No fatigue seeds 13-15 (12 runs) | done 15 Nov (all exit 0). All planned experiments complete |
 | 7-8 | CrossQ without batch normalisation: Fixed, Drift, Sudden, seeds 11-15 (15 runs), only if the pilot passes | not run: pilot failed (Amendment 3); H6 and H7 not testable |
-| 9 | Amendment 4 (exploratory): CrossQ No fatigue + Fixed with a final fatigue sweep, seeds 11-13 (6 runs, `configs/sweep/`) | planned |
+| 9 | Amendment 4 (exploratory): CrossQ No fatigue + Fixed with a final fatigue sweep, seeds 11-13 (6 runs, `configs/sweep/`) | done 22 Nov, all 6 runs completed (134-141 min each) |
 
 Each batch is sized to finish within Kaggle's 12-hour session limit on 2x T4 (CrossQ about 171 min
 and SAC about 90 min per Hand Reach run, measured in the pilot).

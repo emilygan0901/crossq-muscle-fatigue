@@ -66,3 +66,9 @@
 ## Runs kept outside results/raw
 
 The three elbow-task pilots of 6 Nov 2026 (CrossQ, SAC first attempt with wrong flags, SAC rerun) are in `results/pilot_elbow/`, with their own README. They predate `run_experiment.sh` and are not used in any reported analysis.
+| sweep_handreach_crossq_fixed_seed11_20261122T001012Z | configs/sweep/handreach_crossq_fixed_sweep.cfg | 11 | 0 | 140 | |
+| sweep_handreach_crossq_nofatigue_seed11_20261122T001010Z | configs/sweep/handreach_crossq_nofatigue_sweep.cfg | 11 | 0 | 141 | |
+| sweep_handreach_crossq_fixed_seed12_20261122T023103Z | configs/sweep/handreach_crossq_fixed_sweep.cfg | 12 | 0 | 135 | |
+| sweep_handreach_crossq_nofatigue_seed12_20261122T023013Z | configs/sweep/handreach_crossq_nofatigue_sweep.cfg | 12 | 0 | 136 | |
+| sweep_handreach_crossq_nofatigue_seed13_20261122T044535Z | configs/sweep/handreach_crossq_nofatigue_sweep.cfg | 13 | 0 | 134 | |
+| sweep_handreach_crossq_fixed_seed13_20261122T044624Z | configs/sweep/handreach_crossq_fixed_sweep.cfg | 13 | 0 | 137 | |

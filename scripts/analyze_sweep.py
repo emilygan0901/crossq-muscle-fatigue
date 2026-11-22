@@ -9,7 +9,7 @@ src/fatigue_sweep.py) and reports the quantities fixed in Amendment 4:
   E3  at test level 0:   No-fatigue-trained minus Fixed-trained return, paired by seed
   E4  per training condition, the lowest test level at which the mean solved fraction falls below
       half of its value at level 0 (descriptive)
-All quantities are exploratory and reported with 95% bootstrap CIs and t-intervals over seeds.
+All quantities are exploratory and reported per seed, with 95% bootstrap CIs and t-intervals over seeds.
 """
 import glob
 import os
@@ -72,9 +72,8 @@ for c, lab, col in CONDS:
     R = np.array([v[0] for v in per_seed[c].values()])
     S = np.array([v[1] for v in per_seed[c].values()])
     for ax, Y in ((axes[0], R), (axes[1], S)):
-        lo, hi = np.array([boot_ci(Y[:, i]) for i in range(len(levels))]).T
-        if len(Y) >= 2:
-            ax.fill_between(levels, lo, hi, color=col, alpha=0.18, linewidth=0)
+        for y in Y:          # with 3 seeds, show every seed rather than a bootstrap band
+            ax.plot(levels, y, color=col, linewidth=0.6, alpha=0.35)
         ax.plot(levels, Y.mean(0), color=col, linewidth=1.5, marker="o", markersize=2.5,
                 label=f"{lab} (n = {len(Y)})")
 for ax, ylab in ((axes[0], "Return"), (axes[1], "Solved fraction")):
@@ -111,13 +110,20 @@ def paired(a, b, lvl):
     return ss, np.array([per_seed[a][s][0][i] - per_seed[b][s][0][i] for s in ss])
 
 
-md.append("\n| Quantity | Seeds | Mean [95% bootstrap CI] | 95% t-interval |\n|---|---|---|---|")
+md.append("\n| Quantity | Seeds | Per seed | Mean [95% bootstrap CI] | 95% t-interval |\n|---|---|---|---|---|")
+if "nofatigue" in per_seed:      # E1 at the trained-weak level: same policy, same targets, level 0 minus 0.5
+    i0, i5 = int(np.argmin(np.abs(levels))), int(np.argmin(np.abs(levels - 0.5)))
+    ss = sorted(per_seed["nofatigue"])
+    d = np.array([per_seed["nofatigue"][k][0][i0] - per_seed["nofatigue"][k][0][i5] for k in ss])
+    tc = t_ci(d)
+    md.append(f"| E1 at 0.5: No-fatigue-trained, test level 0 minus 0.5 (physical cost) | {len(d)} | "
+              + ", ".join(str(int(round(x))) or "0" for x in d) + f" | {fmt(d.mean(), boot_ci(d))} | [{tc[0]:.1f}, {tc[1]:.1f}] |")
 for name, a, b, lvl in (("E2: Fixed-trained minus No-fatigue-trained, test level 0.5", "fixed", "nofatigue", 0.5),
                         ("E3: No-fatigue-trained minus Fixed-trained, test level 0", "nofatigue", "fixed", 0.0)):
     ss, d = paired(a, b, lvl)
     if len(d):
         tc = t_ci(d)
-        md.append(f"| {name} | {len(d)} | {fmt(d.mean(), boot_ci(d))} | "
+        md.append(f"| {name} | {len(d)} | " + ", ".join(str(int(round(x))) or "0" for x in d) + f" | {fmt(d.mean(), boot_ci(d))} | "
                   + ("-" if np.isnan(tc[0]) else f"[{tc[0]:.1f}, {tc[1]:.1f}]") + " |")
 if "nofatigue" in per_seed:
     R = np.array([v[0] for v in per_seed["nofatigue"].values()])
@@ -129,6 +135,6 @@ for c, lab, _ in CONDS:
         below = [l for l, s in zip(levels, S) if s < 0.5 * S[0]]
         md.append(f"E4 ({lab}): " + (f"solved fraction first below half its level-0 value at {below[0]:g}."
                                      if below else "solved fraction never falls below half its level-0 value."))
-md.append("\nAll quantities are exploratory (Amendment 4).")
+md.append("\nAll quantities are exploratory (Amendment 4). With 3 seeds the bootstrap CI is unreliable, so the t-interval is the main interval.")
 open("tables/sweep_crossq.md", "w").write("\n".join(md) + "\n")
 print("\n".join(md))
