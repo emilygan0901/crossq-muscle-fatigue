@@ -240,3 +240,9 @@ estimates are imprecise, so the results are reported as exploratory evidence onl
 *Compute.* 6 CrossQ runs at about 140-160 min each, two at a time on 2x T4, plus about 10 min per run
 for the sweep, so about 8 hours in one Kaggle session (about 16 GPU-hours).
 
+*Post hoc addition (25 Nov 2026, after the Batch 9 results).* The saved actors of the six Amendment 4
+runs were replayed on a CPU at the same levels, seeds and number of episodes as the GPU sweep, recording
+commanded drive, actual activation, muscles at capacity, final distance and time to solve
+(`scripts/analyze_activation.py`, `tables/activation_crossq.md`). This analysis was not specified
+before the runs and is reported as exploratory. It uses no new training runs.
+

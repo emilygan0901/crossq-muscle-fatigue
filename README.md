@@ -125,7 +125,8 @@ python scripts/analyze_ramp.py results            # secondary measure (dip durin
 python scripts/analyze_bridge.py results          # bridge runs vs reproduction
 python scripts/analyze_sudden_windows.py results  # paired CIs around the sudden drop
 python scripts/analyze_variation.py results       # run-to-run variation of identical runs
-python scripts/analyze_sweep.py results           # Fig. 7, Amendment 4
+python scripts/analyze_sweep.py results           # Amendment 4 sweep tables
+CODE_DIR=/path/to/CrossQ-dev python scripts/analyze_activation.py results   # Fig. 7, muscle use of the saved policies (CPU, ~6 min)
 python scripts/make_method_figure.py              # Fig. 1 (Graphviz + matplotlib; needs dot and rsvg-convert)
 PYTHONPATH=src python tests/test_fatigue_drift.py # unit tests of the fatigue schedule (MyoSuite env)
 python scripts/check_builtin_fatigue.py results/builtin_fatigue.csv   # MyoSuite env
@@ -140,7 +141,7 @@ python scripts/check_activation_saturation.py     # MyoSuite env
 | Fig. 4, paired differences | `figures/main_differences.*` | `analyze_main.py` |
 | Fig. 5, penalty over training | `figures/penalty_time.*` | `analyze_main.py` |
 | Fig. 6, around the sudden drop | `figures/sudden_zoom.*`, `tables/sudden_crossq.md`, `tables/sudden_windows.md` | `analyze_main.py`, `analyze_sudden_windows.py` |
-| Fig. 7, final policies across fatigue levels | `figures/fatigue_sweep.*`, `tables/sweep_crossq.md` | `analyze_sweep.py` |
+| Fig. 7, final policies across fatigue levels | `figures/policy_sweep.*`, `tables/sweep_crossq.md`, `tables/activation_crossq.md` | `analyze_sweep.py`, `analyze_activation.py` (CPU replay of the saved policies) |
 | Table I, related work | (from the literature) | |
 | Table II, inherited vs own work | this README, `patches/` | |
 | Table III, hyperparameters and compute | `tables/settings_compute.md` | `analyze_main.py` |
@@ -148,7 +149,7 @@ python scripts/check_activation_saturation.py     # MyoSuite env
 | Table V, pre-registered comparisons | `tables/hypotheses.md`, `tables/h1_crossq.md` | `analyze_main.py`, `analyze_h1.py` |
 
 Other figures in `figures/` (`schedules`, `setup_figure`, `setup_schematic`, `main_curves`,
-`ramp_crossq`) are earlier or alternative versions not used in the final paper.
+`ramp_crossq`, `fatigue_sweep`) are earlier or alternative versions not used in the final paper.
 
 ### Where other numbers in the paper come from
 
@@ -164,6 +165,7 @@ Other figures in `figures/` (`schedules`, `setup_figure`, `setup_schematic`, `ma
 | Bridge runs (5312, 3828) | `tables/bridge_walker2d.md` |
 | Elbow-task ceiling | `results/pilot_elbow/README.md` |
 | 68 runs, 135.1 GPU-hours | `tables/settings_compute.md` |
+| Commanded drive, activation, muscles at capacity, final distance and steps to solve of the saved policies | `tables/activation_crossq.md` |
 
 ## Pre-registration
 
